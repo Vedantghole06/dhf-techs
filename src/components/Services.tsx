@@ -9,7 +9,7 @@ import {
 
 gsap.registerPlugin(ScrollTrigger);
 
-const Services: React.FC = () => {
+const Services = () => {
   const servicesRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
