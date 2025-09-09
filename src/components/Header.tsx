@@ -1,24 +1,31 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import Logo from '../assets/logo.png';
 
-interface HeaderProps {
-  currentPage: string;
-  setCurrentPage: (page: string) => void;
-}
-
-const Header: React.FC<HeaderProps> = ({ currentPage, setCurrentPage }) => {
+const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   const navItems = [
-    { id: 'home', label: 'Home' },
-    { id: 'about', label: 'About Us' },
-    { id: 'services', label: 'Services' },
-    { id: 'products', label: 'Products' },
-    { id: 'clients', label: 'Clients' },
-    { id: 'contact', label: 'Contact' }
+    { id: 'home', label: 'Home', path: '/' },
+    { id: 'about', label: 'About Us', path: '/about' },
+    { id: 'services', label: 'Services', path: '/services' },
+    { id: 'products', label: 'Products', path: '/products' },
+    { id: 'clients', label: 'Clients', path: '/clients' },
+    { id: 'contact', label: 'Contact', path: '/contact' }
   ];
+
+  const handleNavigation = (path: string) => {
+    navigate(path);
+    setIsMenuOpen(false);
+  };
+
+  const isCurrentPage = (path: string) => {
+    return location.pathname === path;
+  };
 
   return (
     <header className="fixed top-0 w-full bg-black/90 backdrop-blur-md border-b border-gray-800 z-50">
@@ -28,9 +35,10 @@ const Header: React.FC<HeaderProps> = ({ currentPage, setCurrentPage }) => {
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
-            className="flex items-center space-x-2"
+            className="flex items-center space-x-2 cursor-pointer"
+            onClick={() => handleNavigation('/')}
           >
-            <img className='h-10' src={Logo} alt="" />
+            <img className='h-10' src={Logo} alt="D.H. Fulzele Logo" />
           </motion.div>
 
           {/* Desktop Navigation */}
@@ -38,15 +46,15 @@ const Header: React.FC<HeaderProps> = ({ currentPage, setCurrentPage }) => {
             {navItems.map((item) => (
               <button
                 key={item.id}
-                onClick={() => setCurrentPage(item.id)}
-                className={`relative px-3 py-2 text-sm font-medium transition-colors ${
-                  currentPage === item.id
+                onClick={() => handleNavigation(item.path)}
+                className={`relative px-3 py-2 text-sm font-medium transition-colors bg-transparent border-none outline-none cursor-pointer ${
+                  isCurrentPage(item.path)
                     ? 'text-red-500'
                     : 'text-gray-300 hover:text-white'
                 }`}
               >
                 {item.label}
-                {currentPage === item.id && (
+                {isCurrentPage(item.path) && (
                   <motion.div
                     layoutId="activeTab"
                     className="absolute bottom-0 left-0 right-0 h-0.5 bg-red-500"
@@ -58,7 +66,7 @@ const Header: React.FC<HeaderProps> = ({ currentPage, setCurrentPage }) => {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-white"
+            className="md:hidden text-white bg-transparent border-none outline-none cursor-pointer"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -76,12 +84,9 @@ const Header: React.FC<HeaderProps> = ({ currentPage, setCurrentPage }) => {
             {navItems.map((item) => (
               <button
                 key={item.id}
-                onClick={() => {
-                  setCurrentPage(item.id);
-                  setIsMenuOpen(false);
-                }}
-                className={`block w-full text-left px-4 py-2 text-sm font-medium transition-colors ${
-                  currentPage === item.id
+                onClick={() => handleNavigation(item.path)}
+                className={`block w-full text-left px-4 py-2 text-sm font-medium transition-colors bg-transparent border-none outline-none cursor-pointer ${
+                  isCurrentPage(item.path)
                     ? 'text-red-500'
                     : 'text-gray-300 hover:text-white'
                 }`}
