@@ -13,7 +13,7 @@
 //     if (timelineRef.current) {
 //       const timelineItems = timelineRef.current.querySelectorAll('.timeline-item');
 
-//       gsap.fromTo(timelineItems, 
+//       gsap.fromTo(timelineItems,
 //         {
 //           opacity: 0,
 //           x: -100
@@ -105,8 +105,8 @@
 //               About <span className="text-red-500">D.H. Fulzele</span>
 //             </h1>
 //             <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-//               Since 1988, we've been pioneering the perfect balance between traditional engineering 
-//               excellence and cutting-edge IT innovation, serving industries across India with 
+//               Since 1988, we've been pioneering the perfect balance between traditional engineering
+//               excellence and cutting-edge IT innovation, serving industries across India with
 //               unwavering commitment to quality and reliability.
 //             </p>
 //           </motion.div>
@@ -129,8 +129,8 @@
 //                 <h2 className="text-3xl font-bold text-white">Our Mission</h2>
 //               </div>
 //               <p className="text-gray-300 text-lg leading-relaxed">
-//                 To deliver comprehensive engineering and IT solutions that enhance industrial 
-//                 efficiency, safety, and sustainability. We strive to be the trusted partner 
+//                 To deliver comprehensive engineering and IT solutions that enhance industrial
+//                 efficiency, safety, and sustainability. We strive to be the trusted partner
 //                 for businesses seeking reliable technical expertise and innovative digital transformation.
 //               </p>
 //             </motion.div>
@@ -147,8 +147,8 @@
 //                 <h2 className="text-3xl font-bold text-white">Our Vision</h2>
 //               </div>
 //               <p className="text-gray-300 text-lg leading-relaxed">
-//                 To be India's leading integrated engineering and IT solutions provider, 
-//                 recognized for our innovation, reliability, and commitment to creating 
+//                 To be India's leading integrated engineering and IT solutions provider,
+//                 recognized for our innovation, reliability, and commitment to creating
 //                 sustainable industrial ecosystems that drive economic growth and technological advancement.
 //               </p>
 //             </motion.div>
@@ -237,9 +237,9 @@
 //                   <h3 className="text-3xl font-bold text-white mb-2">Mr. D.H. Fulzele</h3>
 //                   <p className="text-xl text-red-400 font-semibold mb-4">Chief Executive Officer & Founder</p>
 //                   <p className="text-gray-300 leading-relaxed mb-6">
-//                     With over three decades of visionary leadership, Mr. D.H. Fulzele has built the company 
-//                     from the ground up, establishing it as a trusted name in engineering and IT solutions. 
-//                     His commitment to innovation and quality has driven the company's growth from a small 
+//                     With over three decades of visionary leadership, Mr. D.H. Fulzele has built the company
+//                     from the ground up, establishing it as a trusted name in engineering and IT solutions.
+//                     His commitment to innovation and quality has driven the company's growth from a small
 //                     engineering firm to a comprehensive industrial solutions provider.
 //                   </p>
 //                   <div className="flex flex-wrap justify-center lg:justify-start gap-4">
@@ -276,7 +276,7 @@
 //             </p>
 //           </motion.div>
 
-//           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+//           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-2xl mx-auto">
 //             {/* Team Member 1 */}
 //             <motion.div
 //               initial={{ opacity: 0, y: 30 }}
@@ -293,7 +293,7 @@
 //                   className="w-full h-full object-cover"
 //                 />
 //               </div>
-//               <h3 className="text-lg font-semibold text-white text-center mb-1">Rajesh Kumar</h3>
+//               <h3 className="text-lg font-semibold text-white text-center mb-1">Vaibhav Fulzele</h3>
 //               <p className="text-red-400 text-sm text-center mb-3 font-medium">Engineering Manager</p>
 //               <p className="text-gray-400 text-sm text-center leading-relaxed">
 //                 15+ years in mechanical engineering and industrial automation systems.
@@ -311,61 +311,15 @@
 //             >
 //               <div className="w-24 h-24 rounded-full overflow-hidden mx-auto mb-4 border-2 border-gray-700 group-hover:border-red-500/50 transition-all">
 //                 <img
-//                   src="https://images.pexels.com/photos/3778876/pexels-photo-3778876.jpeg"
-//                   alt="Priya Sharma - IT Director"
+//                   src="./src/assets/piyush.jpg"
+//                   alt="Piyush Awari - IT Director"
 //                   className="w-full h-full object-cover"
 //                 />
 //               </div>
-//               <h3 className="text-lg font-semibold text-white text-center mb-1">Priya Sharma</h3>
+//               <h3 className="text-lg font-semibold text-white text-center mb-1">Piyush Awari</h3>
 //               <p className="text-red-400 text-sm text-center mb-3 font-medium">IT Director</p>
 //               <p className="text-gray-400 text-sm text-center leading-relaxed">
 //                 Expert in software development, SaaS solutions, and digital transformation.
-//               </p>
-//             </motion.div>
-
-//             {/* Team Member 3 */}
-//             <motion.div
-//               initial={{ opacity: 0, y: 30 }}
-//               whileInView={{ opacity: 1, y: 0 }}
-//               transition={{ duration: 0.8, delay: 0.3 }}
-//               viewport={{ once: true }}
-//               whileHover={{ y: -10, scale: 1.02 }}
-//               className="bg-gray-900/50 p-6 rounded-xl border border-gray-800 hover:border-gray-600 transition-all group"
-//             >
-//               <div className="w-24 h-24 rounded-full overflow-hidden mx-auto mb-4 border-2 border-gray-700 group-hover:border-red-500/50 transition-all">
-//                 <img
-//                   src="https://images.pexels.com/photos/3760263/pexels-photo-3760263.jpeg"
-//                   alt="Amit Patel - Operations Head"
-//                   className="w-full h-full object-cover"
-//                 />
-//               </div>
-//               <h3 className="text-lg font-semibold text-white text-center mb-1">Amit Patel</h3>
-//               <p className="text-red-400 text-sm text-center mb-3 font-medium">Operations Head</p>
-//               <p className="text-gray-400 text-sm text-center leading-relaxed">
-//                 Specializes in project management, client relations, and operational excellence.
-//               </p>
-//             </motion.div>
-
-//             {/* Team Member 4 */}
-//             <motion.div
-//               initial={{ opacity: 0, y: 30 }}
-//               whileInView={{ opacity: 1, y: 0 }}
-//               transition={{ duration: 0.8, delay: 0.4 }}
-//               viewport={{ once: true }}
-//               whileHover={{ y: -10, scale: 1.02 }}
-//               className="bg-gray-900/50 p-6 rounded-xl border border-gray-800 hover:border-gray-600 transition-all group"
-//             >
-//               <div className="w-24 h-24 rounded-full overflow-hidden mx-auto mb-4 border-2 border-gray-700 group-hover:border-red-500/50 transition-all">
-//                 <img
-//                   src="https://images.pexels.com/photos/3777943/pexels-photo-3777943.jpeg"
-//                   alt="Sneha Desai - Quality Assurance Lead"
-//                   className="w-full h-full object-cover"
-//                 />
-//               </div>
-//               <h3 className="text-lg font-semibold text-white text-center mb-1">Sneha Desai</h3>
-//               <p className="text-red-400 text-sm text-center mb-3 font-medium">Quality Assurance Lead</p>
-//               <p className="text-gray-400 text-sm text-center leading-relaxed">
-//                 Ensures quality standards across all engineering and software deliverables.
 //               </p>
 //             </motion.div>
 //           </div>
@@ -421,8 +375,8 @@
 //           >
 //             <h3 className="text-2xl font-bold text-white mb-4">Strategic Partnership</h3>
 //             <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-//               In collaboration with <span className="text-red-400 font-semibold">M/s Vaibhav Enterprises</span>, 
-//               we deliver advanced IT, Automation, and Software solutions, expanding our capabilities 
+//               In collaboration with <span className="text-red-400 font-semibold">M/s Vaibhav Enterprises</span>,
+//               we deliver advanced IT, Automation, and Software solutions, expanding our capabilities
 //               to serve diverse industrial needs with comprehensive technical expertise.
 //             </p>
 //           </motion.div>
@@ -443,8 +397,8 @@ import { Target, Eye, Heart, Shield, Lightbulb, Users } from 'lucide-react';
 
 gsap.registerPlugin(ScrollTrigger);
 
-const About: React.FC = () => {
-  const timelineRef = useRef<HTMLDivElement>(null);
+const About = () => {
+  const timelineRef = useRef(null);
 
   useEffect(() => {
     if (timelineRef.current) {
@@ -561,11 +515,11 @@ const About: React.FC = () => {
               viewport={{ once: true }}
               className="bg-gradient-to-br from-gray-800 to-gray-900 p-8 rounded-2xl"
             >
-              <div className="flex items-center space-x-3 mb-6">
+              <div className="flex items-center justify-center lg:justify-start space-x-3 mb-6">
                 <Target className="w-8 h-8 text-red-500" />
                 <h2 className="text-3xl font-bold text-white">Our Mission</h2>
               </div>
-              <p className="text-gray-300 text-lg leading-relaxed">
+              <p className="text-gray-300 text-lg leading-relaxed text-center lg:text-left">
                 To deliver comprehensive engineering and IT solutions that enhance industrial
                 efficiency, safety, and sustainability. We strive to be the trusted partner
                 for businesses seeking reliable technical expertise and innovative digital transformation.
@@ -579,11 +533,11 @@ const About: React.FC = () => {
               viewport={{ once: true }}
               className="bg-gradient-to-br from-red-900/20 to-orange-900/20 p-8 rounded-2xl border border-red-500/20"
             >
-              <div className="flex items-center space-x-3 mb-6">
+              <div className="flex items-center justify-center lg:justify-start space-x-3 mb-6">
                 <Eye className="w-8 h-8 text-orange-500" />
                 <h2 className="text-3xl font-bold text-white">Our Vision</h2>
               </div>
-              <p className="text-gray-300 text-lg leading-relaxed">
+              <p className="text-gray-300 text-lg leading-relaxed text-center lg:text-left">
                 To be India's leading integrated engineering and IT solutions provider,
                 recognized for our innovation, reliability, and commitment to creating
                 sustainable industrial ecosystems that drive economic growth and technological advancement.
@@ -726,7 +680,7 @@ const About: React.FC = () => {
               <div className="w-24 h-24 rounded-full overflow-hidden mx-auto mb-4 border-2 border-gray-700 group-hover:border-red-500/50 transition-all">
                 <img
                   src="https://images.pexels.com/photos/3785079/pexels-photo-3785079.jpeg"
-                  alt="Rajesh Kumar - Engineering Manager"
+                  alt="Vaibhav Fulzele - Engineering Manager"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -748,7 +702,7 @@ const About: React.FC = () => {
             >
               <div className="w-24 h-24 rounded-full overflow-hidden mx-auto mb-4 border-2 border-gray-700 group-hover:border-red-500/50 transition-all">
                 <img
-                  src="./src/assets/piyush.jpg"
+                  src="https://images.pexels.com/photos/3778603/pexels-photo-3778603.jpeg"
                   alt="Piyush Awari - IT Director"
                   className="w-full h-full object-cover"
                 />

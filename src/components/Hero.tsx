@@ -2,13 +2,37 @@ import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { gsap } from 'gsap';
 import { Cog, Code, ArrowRight, Users, Award, TrendingUp } from 'lucide-react';
-import AnimatedCounter from './AnimatedCounter';
 
-const Hero: React.FC = () => {
-  const heroRef = useRef<HTMLDivElement>(null);
-  const engineeringRef = useRef<HTMLDivElement>(null);
-  const itRef = useRef<HTMLDivElement>(null);
-  const animationRef = useRef<gsap.core.Timeline | null>(null);
+const AnimatedCounter = ({ end, suffix = '', className = '' }) => {
+  const [count, setCount] = React.useState(0);
+
+  useEffect(() => {
+    let startTime;
+    const duration = 2000;
+
+    const animate = (currentTime) => {
+      if (!startTime) startTime = currentTime;
+      const progress = (currentTime - startTime) / duration;
+
+      if (progress < 1) {
+        setCount(Math.floor(end * progress));
+        requestAnimationFrame(animate);
+      } else {
+        setCount(end);
+      }
+    };
+
+    requestAnimationFrame(animate);
+  }, [end]);
+
+  return <span className={className}>{count}{suffix}</span>;
+};
+
+const Hero = () => {
+  const heroRef = useRef(null);
+  const engineeringRef = useRef(null);
+  const itRef = useRef(null);
+  const animationRef = useRef(null);
 
   useEffect(() => {
     // Clean up previous animation if it exists
@@ -18,12 +42,12 @@ const Hero: React.FC = () => {
 
     const tl = gsap.timeline();
     animationRef.current = tl;
-    
+
     // Animate background patterns with error handling
     const engineeringPatterns = document.querySelectorAll('.engineering-pattern');
     const itPatterns = document.querySelectorAll('.it-pattern');
     const floatingIcons = document.querySelectorAll('.floating-icon');
-    
+
     if (engineeringPatterns.length > 0) {
       gsap.set(engineeringPatterns, { opacity: 0, scale: 0.8 });
       tl.to(engineeringPatterns, {
@@ -33,7 +57,7 @@ const Hero: React.FC = () => {
         ease: 'power2.out'
       });
     }
-    
+
     if (itPatterns.length > 0) {
       gsap.set(itPatterns, { opacity: 0, scale: 0.8 });
       tl.to(itPatterns, {
@@ -80,77 +104,77 @@ const Hero: React.FC = () => {
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute left-0 top-0 w-1/2 h-full">
           {/* Engineering Blueprint Pattern */}
-          <svg 
-            className="engineering-pattern w-full h-full" 
+          <svg
+            className="engineering-pattern w-full h-full"
             viewBox="0 0 400 400"
             preserveAspectRatio="xMidYMid slice"
             aria-hidden="true"
           >
             <defs>
-              <pattern 
-                id="blueprint" 
-                x="0" 
-                y="0" 
-                width="40" 
-                height="40" 
+              <pattern
+                id="blueprint"
+                x="0"
+                y="0"
+                width="40"
+                height="40"
                 patternUnits="userSpaceOnUse"
               >
-                <path 
-                  d="M 40 0 L 0 0 L 0 40" 
-                  fill="none" 
-                  stroke="#2C2C2C" 
-                  strokeWidth="1" 
+                <path
+                  d="M 40 0 L 0 0 L 0 40"
+                  fill="none"
+                  stroke="#2C2C2C"
+                  strokeWidth="1"
                   opacity="0.3"
                 />
-                <circle 
-                  cx="20" 
-                  cy="20" 
-                  r="2" 
-                  fill="#2C2C2C" 
+                <circle
+                  cx="20"
+                  cy="20"
+                  r="2"
+                  fill="#2C2C2C"
                   opacity="0.3"
                 />
               </pattern>
             </defs>
-            <rect width="100%" height="100%" fill="url(#blueprint)"/>
+            <rect width="100%" height="100%" fill="url(#blueprint)" />
           </svg>
         </div>
-        
+
         <div className="absolute right-0 top-0 w-1/2 h-full">
           {/* IT Digital Grid Pattern */}
-          <svg 
-            className="it-pattern w-full h-full" 
+          <svg
+            className="it-pattern w-full h-full"
             viewBox="0 0 400 400"
             preserveAspectRatio="xMidYMid slice"
             aria-hidden="true"
           >
             <defs>
-              <pattern 
-                id="digital-grid" 
-                x="0" 
-                y="0" 
-                width="30" 
-                height="30" 
+              <pattern
+                id="digital-grid"
+                x="0"
+                y="0"
+                width="30"
+                height="30"
                 patternUnits="userSpaceOnUse"
               >
-                <rect 
-                  width="30" 
-                  height="30" 
-                  fill="none" 
-                  stroke="#D62828" 
-                  strokeWidth="1" 
+                <rect
+                  width="30"
+                  height="30"
+                  fill="none"
+                  stroke="#D62828"
+                  strokeWidth="1"
                   opacity="0.2"
                 />
-                <rect 
-                  x="10" 
-                  y="10" 
-                  width="10" 
-                  height="10" 
-                  fill="#D62828" 
+                <rect
+                  x="10"
+                  y="10"
+                  width="10"
+                  height="10"
+                  fill="#D62828"
                   opacity="0.1"
                 />
               </pattern>
             </defs>
-            <rect width="100%" height="100%" fill="url(#digital-grid)"/>
+            <rect width="100%" height="100%" fill="url(#digital-grid)" />
           </svg>
         </div>
       </div>
@@ -167,28 +191,28 @@ const Hero: React.FC = () => {
               transition={{ duration: 0.8 }}
               className="flex flex-col justify-center space-y-6"
             >
-              <div className="flex items-center space-x-3">
-                <Cog 
-                  className="floating-icon w-8 h-8 text-gray-300" 
+              <div className="flex items-center space-x-3 justify-center lg:justify-start">
+                <Cog
+                  className="floating-icon w-8 h-8 text-gray-300"
                   aria-hidden="true"
                 />
                 <h2 className="text-xl font-semibold text-gray-300">
                   Engineering Excellence
                 </h2>
               </div>
-              
-              <div>
+
+              <div className="text-center lg:text-left">
                 <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold text-white mb-4 leading-tight">
                   Precision.
                   <span className="block text-gray-400">Reliability.</span>
                 </h1>
-                <p className="text-base sm:text-lg text-gray-300 leading-relaxed max-w-lg">
-                  Industrial solutions built on 35+ years of mechanical and civil engineering expertise. 
+                <p className="text-base sm:text-lg text-gray-300 leading-relaxed max-w-lg mx-auto lg:mx-0">
+                  Industrial solutions built on 35+ years of mechanical and civil engineering expertise.
                   From manpower supply to automation systems.
                 </p>
               </div>
-              
-              <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+
+              <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 justify-center lg:justify-start">
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
@@ -210,28 +234,28 @@ const Hero: React.FC = () => {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="flex flex-col justify-center space-y-6"
             >
-              <div className="flex items-center space-x-3">
-                <Code 
-                  className="floating-icon w-8 h-8 text-red-500" 
+              <div className="flex items-center space-x-3 justify-center lg:justify-start">
+                <Code
+                  className="floating-icon w-8 h-8 text-red-500"
                   aria-hidden="true"
                 />
                 <h2 className="text-xl font-semibold text-red-500">
                   IT Innovation
                 </h2>
               </div>
-              
-              <div>
+
+              <div className="text-center lg:text-left">
                 <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold text-white mb-4 leading-tight">
                   Digital.
                   <span className="block text-orange-500">Future.</span>
                 </h1>
-                <p className="text-base sm:text-lg text-gray-300 leading-relaxed max-w-lg">
-                  Cutting-edge software development, SaaS solutions, and Manufacturing Execution Systems 
+                <p className="text-base sm:text-lg text-gray-300 leading-relaxed max-w-lg mx-auto lg:mx-0">
+                  Cutting-edge software development, SaaS solutions, and Manufacturing Execution Systems
                   that drive modern industry forward.
                 </p>
               </div>
-              
-              <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+
+              <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 justify-center lg:justify-start">
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
@@ -277,36 +301,36 @@ const Hero: React.FC = () => {
           >
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 text-center">
               <div className="flex flex-col items-center space-y-4 p-6 bg-gray-900/50 rounded-xl border border-gray-800">
-                <Users 
-                  className="w-8 h-8 text-red-500" 
+                <Users
+                  className="w-8 h-8 text-red-500"
                   aria-hidden="true"
                 />
-                <AnimatedCounter 
-                  end={85} 
-                  suffix="+" 
-                  className="text-3xl font-bold text-white" 
+                <AnimatedCounter
+                  end={85}
+                  suffix="+"
+                  className="text-3xl font-bold text-white"
                 />
                 <p className="text-gray-400">
                   Skilled Engineers & IT Experts
                 </p>
               </div>
               <div className="flex flex-col items-center space-y-4 p-6 bg-gray-900/50 rounded-xl border border-gray-800">
-                <Award 
-                  className="w-8 h-8 text-orange-500" 
+                <Award
+                  className="w-8 h-8 text-orange-500"
                   aria-hidden="true"
                 />
-                <AnimatedCounter 
-                  end={35} 
-                  suffix="+" 
-                  className="text-3xl font-bold text-white" 
+                <AnimatedCounter
+                  end={35}
+                  suffix="+"
+                  className="text-3xl font-bold text-white"
                 />
                 <p className="text-gray-400">
                   Years of Experience
                 </p>
               </div>
               <div className="flex flex-col items-center space-y-4 p-6 bg-gray-900/50 rounded-xl border border-gray-800">
-                <TrendingUp 
-                  className="w-8 h-8 text-red-500" 
+                <TrendingUp
+                  className="w-8 h-8 text-red-500"
                   aria-hidden="true"
                 />
                 <span className="text-3xl font-bold text-white">
