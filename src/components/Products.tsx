@@ -19,7 +19,7 @@ const Products: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState("all")
   const [isLoading, setIsLoading] = useState(false)
   const [isPageLoaded, setIsPageLoaded] = useState(false)
-  const productsRef = useRef<HTMLDivElement>(null)
+  const productsRef = useRef(null)
 
   const categories = [
     { id: "all", label: "All Products" },
@@ -38,7 +38,7 @@ const Products: React.FC = () => {
       description:
         "Advanced monitoring systems for real-time equipment condition assessment and input/output management.",
       features: ["Real-time Monitoring", "Predictive Analytics", "Alert Systems", "Data Logging"],
-      image: "/industrial-monitoring-equipment.jpg",
+      image: "./src/assets/audio.jpg",
     },
     {
       id: 2,
@@ -47,7 +47,7 @@ const Products: React.FC = () => {
       title: "Distributed Control Systems",
       description: "Comprehensive DCS solutions for process control and automation in industrial environments.",
       features: ["Process Control", "System Integration", "HMI Integration", "Safety Systems"],
-      image: "/control-systems-dashboard.jpg",
+      image: "./src/assets/audioo.jpg",
     },
     {
       id: 3,
@@ -56,7 +56,7 @@ const Products: React.FC = () => {
       title: "Drives & Motion Control",
       description: "High-performance motor drives and motion control systems for precise industrial operations.",
       features: ["Variable Speed Drives", "Servo Systems", "Motion Controllers", "Energy Efficiency"],
-      image: "/motor-drives-and-gears.jpg",
+      image: "./src/assets/audiooo.jpg",
     },
     {
       id: 4,
@@ -65,7 +65,7 @@ const Products: React.FC = () => {
       title: "Human Machine Interfaces",
       description: "Intuitive HMI solutions for effective human-machine interaction in industrial settings.",
       features: ["Touch Interfaces", "SCADA Integration", "Custom Dashboards", "Remote Access"],
-      image: "/industrial-touch-screen-interface.jpg",
+      image: "./src/assets/lococam.jpg",
     },
     {
       id: 5,
@@ -74,7 +74,7 @@ const Products: React.FC = () => {
       title: "Industrial Sensors & Networks",
       description: "Comprehensive sensor solutions and industrial networking for smart manufacturing.",
       features: ["Smart Sensors", "Wireless Networks", "IoT Integration", "Data Acquisition"],
-      image: "/industrial-sensors-and-networking.jpg",
+      image: "./src/assets/loco.jpg",
     },
 
     // Software Products
@@ -196,11 +196,10 @@ const Products: React.FC = () => {
                 key={category.id}
                 onClick={() => handleCategoryChange(category.id)}
                 disabled={isLoading}
-                className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 active:scale-95 disabled:opacity-50 ${
-                  activeCategory === category.id
-                    ? "bg-gradient-to-r from-red-600 to-orange-500 text-white shadow-lg"
-                    : "bg-gray-800 text-gray-300 hover:bg-gray-700 hover:text-white"
-                }`}
+                className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 active:scale-95 disabled:opacity-50 ${activeCategory === category.id
+                  ? "bg-gradient-to-r from-red-600 to-orange-500 text-white shadow-lg"
+                  : "bg-gray-800 text-gray-300 hover:bg-gray-700 hover:text-white"
+                  }`}
               >
                 {category.label}
               </button>
@@ -230,7 +229,7 @@ const Products: React.FC = () => {
                   }}
                 >
                   {/* Product Image */}
-                  <div className="h-48 bg-gray-800 overflow-hidden relative">
+                  <div className="h-64 bg-gray-800 overflow-hidden relative">
                     <img
                       src={product.image || "/placeholder.svg"}
                       alt={product.title}
@@ -248,11 +247,10 @@ const Products: React.FC = () => {
                   <div className="p-6">
                     <div className="flex items-center space-x-3 mb-4">
                       <div
-                        className={`w-12 h-12 rounded-lg flex items-center justify-center transition-colors ${
-                          product.category === "software"
-                            ? "bg-gradient-to-r from-red-600/20 to-orange-500/20"
-                            : "bg-gray-800"
-                        }`}
+                        className={`w-12 h-12 rounded-lg flex items-center justify-center transition-colors ${product.category === "software"
+                          ? "bg-gradient-to-r from-red-600/20 to-orange-500/20"
+                          : "bg-gray-800"
+                          }`}
                       >
                         <product.icon
                           className={`w-6 h-6 ${product.category === "software" ? "text-red-400" : "text-gray-300"}`}
@@ -260,13 +258,12 @@ const Products: React.FC = () => {
                       </div>
                       <div>
                         <span
-                          className={`text-xs font-medium px-2 py-1 rounded-full ${
-                            product.category === "industrial"
-                              ? "bg-gray-700 text-gray-300"
-                              : product.category === "software"
-                                ? "bg-red-900/30 text-red-400"
-                                : "bg-orange-900/30 text-orange-400"
-                          }`}
+                          className={`text-xs font-medium px-2 py-1 rounded-full ${product.category === "industrial"
+                            ? "bg-gray-700 text-gray-300"
+                            : product.category === "software"
+                              ? "bg-red-900/30 text-red-400"
+                              : "bg-orange-900/30 text-orange-400"
+                            }`}
                         >
                           {categories.find((cat) => cat.id === product.category)?.label}
                         </span>
@@ -280,9 +277,8 @@ const Products: React.FC = () => {
                       {product.features.map((feature, featureIndex) => (
                         <li key={featureIndex} className="text-sm text-gray-500 flex items-center space-x-2">
                           <div
-                            className={`w-1.5 h-1.5 rounded-full ${
-                              product.category === "software" ? "bg-red-500" : "bg-gray-600"
-                            }`}
+                            className={`w-1.5 h-1.5 rounded-full ${product.category === "software" ? "bg-red-500" : "bg-gray-600"
+                              }`}
                           ></div>
                           <span>{feature}</span>
                         </li>
@@ -292,11 +288,10 @@ const Products: React.FC = () => {
                     {/* Hover Effect */}
                     <div className="mt-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                       <button
-                        className={`w-full py-2 rounded-lg font-medium transition-all ${
-                          product.category === "software"
-                            ? "bg-gradient-to-r from-red-600 to-orange-500 text-white hover:from-red-700 hover:to-orange-600"
-                            : "bg-gray-700 text-white hover:bg-gray-600"
-                        }`}
+                        className={`w-full py-2 rounded-lg font-medium transition-all ${product.category === "software"
+                          ? "bg-gradient-to-r from-red-600 to-orange-500 text-white hover:from-red-700 hover:to-orange-600"
+                          : "bg-gray-700 text-white hover:bg-gray-600"
+                          }`}
                       >
                         Learn More
                       </button>

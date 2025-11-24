@@ -702,7 +702,7 @@ const About = () => {
             >
               <div className="w-24 h-24 rounded-full overflow-hidden mx-auto mb-4 border-2 border-gray-700 group-hover:border-red-500/50 transition-all">
                 <img
-                  src="https://images.pexels.com/photos/3778603/pexels-photo-3778603.jpeg"
+                  src="./src/assets/piyush.jpg"
                   alt="Piyush Awari - IT Director"
                   className="w-full h-full object-cover"
                 />
