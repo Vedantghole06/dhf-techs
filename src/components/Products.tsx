@@ -2,17 +2,12 @@ import type React from "react"
 import { useState, useRef, useEffect } from "react"
 import {
   Monitor,
-  Cpu,
-  Gauge,
   Zap,
   Network,
   Smartphone,
   Cloud,
   Database,
-  Code,
-  BarChart3,
-  Settings,
-  Layers,
+  Settings
 } from "lucide-react"
 
 const Products: React.FC = () => {
@@ -24,130 +19,121 @@ const Products: React.FC = () => {
   const categories = [
     { id: "all", label: "All Products" },
     { id: "industrial", label: "Industrial" },
-    { id: "software", label: "IT & Software" },
-    { id: "automation", label: "Automation" },
   ]
 
   const products = [
-    // Industrial Products
     {
       id: 1,
       category: "industrial",
-      icon: Gauge,
-      title: "Condition Monitoring & I/O",
-      description:
-        "Advanced monitoring systems for real-time equipment condition assessment and input/output management.",
-      features: ["Real-time Monitoring", "Predictive Analytics", "Alert Systems", "Data Logging"],
-      image: "./src/assets/audio.jpg",
+      icon: Monitor,
+      title: "Camera / Transmitter",
+      description: "High performance loco-camera transmitter for live video transmission.",
+      features: [
+        "Full HD 1080P resolution",
+        "Switchable aspect ratio",
+        "High gain antenna",
+        "25mW to 750mW adjustable transmitting power",
+        "Range up to 1km",
+        "Video capturing angle 170°",
+        "Lower latency video transmission approx. 22ms",
+        "5.8GHz operating frequency",
+        "Wide operating voltage 6.5V – 20V DC",
+      ],
+      image: "./loco_cam.png",
     },
+
     {
       id: 2,
       category: "industrial",
       icon: Network,
-      title: "Distributed Control Systems",
-      description: "Comprehensive DCS solutions for process control and automation in industrial environments.",
-      features: ["Process Control", "System Integration", "HMI Integration", "Safety Systems"],
-      image: "./src/assets/audioo.jpg",
+      title: "Receiver",
+      description: "Robust receiver unit for reliable low-latency video receiving and output.",
+      features: [
+        "Industry leading H.265 encoding technology",
+        "Onboard 4 antenna for better signal reception",
+        "Lower latency video receiving approx 22ms",
+        "Lag free video feed",
+        "Full OSD display",
+        "Wide operating voltage 6.5V – 20V DC",
+        "Adjustable transmitting power from 22mW to 750mW",
+        "Adjustable dual resolution output via HDMI 720p / 1080p",
+      ],
+      image: "/mnt/data/page2.jpg",
     },
+
     {
       id: 3,
       category: "industrial",
-      icon: Zap,
-      title: "Drives & Motion Control",
-      description: "High-performance motor drives and motion control systems for precise industrial operations.",
-      features: ["Variable Speed Drives", "Servo Systems", "Motion Controllers", "Energy Efficiency"],
-      image: "./src/assets/audiooo.jpg",
+      icon: Smartphone,
+      title: "Loco-Display",
+      description: "Dedicated loco-display for clear monitoring with optimized power draw.",
+      features: [
+        "HD Resolution 1280 x 800",
+        "10.1 inch display size",
+        "Operating voltage 12VDC",
+        "Low power consumption",
+        "High contrast ratio",
+      ],
+      image: "./loco_display.png",
     },
+
     {
       id: 4,
       category: "industrial",
-      icon: Monitor,
-      title: "Human Machine Interfaces",
-      description: "Intuitive HMI solutions for effective human-machine interaction in industrial settings.",
-      features: ["Touch Interfaces", "SCADA Integration", "Custom Dashboards", "Remote Access"],
-      image: "./src/assets/lococam.jpg",
+      icon: Settings,
+      title: "Hooter (Siren)",
+      description: "Industrial grade loud siren for audible alerts and warnings.",
+      features: ["110dB industrial grade loud siren"],
+      image: "/mnt/data/page2.jpg",
     },
+
     {
       id: 5,
       category: "industrial",
-      icon: Cpu,
-      title: "Industrial Sensors & Networks",
-      description: "Comprehensive sensor solutions and industrial networking for smart manufacturing.",
-      features: ["Smart Sensors", "Wireless Networks", "IoT Integration", "Data Acquisition"],
-      image: "./src/assets/loco.jpg",
+      icon: Cloud,
+      title: "Solar Charging",
+      description: "Solar charging solution to maximize battery life and provide electrical independence.",
+      features: [
+        "Maintenance free operation",
+        "Maximize battery life",
+        "Electrical power independence",
+      ],
+      image: "/mnt/data/page3.jpg",
     },
 
-    // Software Products
     {
       id: 6,
-      category: "software",
-      icon: Cloud,
-      title: "SaaS Services",
-      description: "Scalable cloud-based software solutions designed for modern business operations.",
-      features: ["Cloud Hosting", "Subscription Models", "Multi-tenant Architecture", "API Integration"],
-      image: "/cloud-computing-services.png",
-    },
-    {
-      id: 7,
-      category: "software",
-      icon: Settings,
-      title: "Manufacturing Execution Systems",
-      description:
-        "Comprehensive MES solutions for production planning, quality management, and operational excellence.",
-      features: ["Production Planning", "Quality Control", "Inventory Management", "Real-time Analytics"],
-      image: "/manufacturing-execution-system.jpg",
-    },
-    {
-      id: 8,
-      category: "software",
-      icon: Code,
-      title: "Application Development Tools",
-      description: "Professional development frameworks and tools for creating robust industrial applications.",
-      features: ["Custom Frameworks", "Development IDE", "Testing Tools", "Deployment Solutions"],
-      image: "/software-development-tools.png",
-    },
-    {
-      id: 9,
-      category: "software",
-      icon: BarChart3,
-      title: "Design & Operations Software",
-      description: "Specialized software for engineering design, operations planning, and workflow optimization.",
-      features: ["CAD Integration", "Workflow Management", "Design Tools", "Process Optimization"],
-      image: "/engineering-design-software.jpg",
+      category: "industrial",
+      icon: Zap,
+      title: "LED Lighting",
+      description: "High-efficiency LED lighting for night visibility and long service life.",
+      features: [
+        "Long life span",
+        "Night visibility",
+        "Low power consumption",
+        "No UV emission",
+        "Wide operational temperature range",
+      ],
+      image: "/mnt/data/page3.jpg",
     },
 
-    // Automation Products
     {
-      id: 10,
-      category: "automation",
-      icon: Layers,
-      title: "Process Automation Systems",
-      description: "Complete automation solutions for industrial processes and manufacturing operations.",
-      features: ["PLC Systems", "SCADA", "Process Control", "System Integration"],
-      image: "/process-automation-systems.jpg",
-    },
-    {
-      id: 11,
-      category: "automation",
+      id: 7,
+      category: "industrial",
       icon: Database,
-      title: "Data Management Systems",
-      description: "Advanced data collection, storage, and analysis systems for industrial automation.",
-      features: ["Data Acquisition", "Real-time Processing", "Analytics Engine", "Reporting Tools"],
-      image: "/data-management-dashboard.jpg",
-    },
-    {
-      id: 12,
-      category: "automation",
-      icon: Smartphone,
-      title: "Mobile Automation Apps",
-      description: "Mobile applications for remote monitoring and control of automated industrial systems.",
-      features: ["Remote Monitoring", "Control Interface", "Alert Notifications", "Data Visualization"],
-      image: "/mobile-automation-app-interface.jpg",
+      title: "Battery",
+      description: "Sealed maintenance-free battery for industrial applications.",
+      features: [
+        "Industrial segment SMF battery",
+        "7Ah capacity",
+        "Spill free sealed lead acid",
+        "Maintenance free",
+      ],
+      image: "/mnt/data/page3.jpg",
     },
   ]
 
-  const filteredProducts =
-    activeCategory === "all" ? products : products.filter((product) => product.category === activeCategory)
+  const filteredProducts = activeCategory === "all" ? products : products.filter((product) => product.category === activeCategory)
 
   const handleCategoryChange = (categoryId: string) => {
     setIsLoading(true)
@@ -277,8 +263,7 @@ const Products: React.FC = () => {
                       {product.features.map((feature, featureIndex) => (
                         <li key={featureIndex} className="text-sm text-gray-500 flex items-center space-x-2">
                           <div
-                            className={`w-1.5 h-1.5 rounded-full ${product.category === "software" ? "bg-red-500" : "bg-gray-600"
-                              }`}
+                            className={`w-1.5 h-1.5 rounded-full ${product.category === "software" ? "bg-red-500" : "bg-gray-600"}`}
                           ></div>
                           <span>{feature}</span>
                         </li>
