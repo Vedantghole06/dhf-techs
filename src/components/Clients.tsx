@@ -13,35 +13,36 @@ const Clients: React.FC = () => {
   const clients = [
     {
       name: 'MAHAGENCO',
-      logo: 'MG',
+      logo: './mahagenco.png',
       description: 'Maharashtra State Power Generation Company - Leading power generation solutions',
       sector: 'Power & Energy'
     },
     {
       name: 'Jai Shree Tools',
-      logo: 'JST',
+      logo: '/clients/jai-shree-tools.png',
       description: 'Industrial tools and equipment manufacturing',
       sector: 'Manufacturing'
     },
     {
       name: 'Numac',
-      logo: 'NUM',
+      logo: '/clients/numac.png',
       description: 'Industrial automation and control systems',
       sector: 'Automation'
     },
     {
       name: 'DNB Group of Engineering',
-      logo: 'DNB',
+      logo: '/clients/dnb.png',
       description: 'Comprehensive engineering solutions and services',
       sector: 'Engineering'
     },
     {
       name: 'Jayshree Electrodevice',
-      logo: 'JED',
+      logo: '/clients/jed.png',
       description: 'Electronic devices and industrial equipment',
       sector: 'Electronics'
     }
   ];
+
 
   const partners = [
     {
@@ -105,8 +106,8 @@ const Clients: React.FC = () => {
     // Certificates fade-in animation
     if (certificatesRef.current) {
       const certificates = certificatesRef.current.querySelectorAll('.certificate-card');
-      
-      gsap.fromTo(certificates, 
+
+      gsap.fromTo(certificates,
         {
           opacity: 0,
           y: 30,
@@ -143,7 +144,7 @@ const Clients: React.FC = () => {
               Our <span className="text-red-500">Clients & Partners</span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-              Trusted by leading organizations across industries. Building lasting partnerships 
+              Trusted by leading organizations across industries. Building lasting partnerships
               through exceptional service delivery and innovative solutions.
             </p>
           </motion.div>
@@ -216,14 +217,19 @@ const Clients: React.FC = () => {
                 className="bg-gray-900/50 p-6 rounded-xl border border-gray-800 hover:border-gray-600 transition-all group cursor-pointer"
               >
                 <div className="flex items-center space-x-4 mb-4">
-                  <div className="w-16 h-16 bg-gradient-to-r from-gray-700 to-gray-600 rounded-xl flex items-center justify-center group-hover:from-gray-600 group-hover:to-gray-500 transition-all">
-                    <span className="text-white font-bold text-lg">{client.logo}</span>
+                  <div className="w-16 h-16 rounded-xl overflow-hidden bg-gray-800 flex items-center justify-center">
+                    <img
+                      src={client.logo}
+                      alt={client.name}
+                      className="w-full h-full object-contain"
+                    />
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold text-white">{client.name}</h3>
                     <span className="text-sm text-red-400 font-medium">{client.sector}</span>
                   </div>
                 </div>
+
                 <p className="text-gray-400 leading-relaxed">{client.description}</p>
               </motion.div>
             ))}
@@ -331,7 +337,7 @@ const Clients: React.FC = () => {
           >
             <h3 className="text-3xl font-bold text-white mb-6">Join Our Growing Network</h3>
             <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
-              Become part of our trusted client network and experience the D.H. Fulzele difference. 
+              Become part of our trusted client network and experience the D.H. Fulzele difference.
               Let's build something great together.
             </p>
             <motion.button

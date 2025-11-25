@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import Logo from '../assets/logo.png';
 
-const Header: React.FC = () => {
+const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
@@ -47,11 +47,10 @@ const Header: React.FC = () => {
               <button
                 key={item.id}
                 onClick={() => handleNavigation(item.path)}
-                className={`relative px-3 py-2 text-sm font-medium transition-colors bg-transparent border-none outline-none cursor-pointer ${
-                  isCurrentPage(item.path)
+                className={`relative px-3 py-2 text-sm font-medium transition-colors bg-transparent border-none outline-none cursor-pointer ${isCurrentPage(item.path)
                     ? 'text-red-500'
                     : 'text-gray-300 hover:text-white'
-                }`}
+                  }`}
               >
                 {item.label}
                 {isCurrentPage(item.path) && (
@@ -85,11 +84,10 @@ const Header: React.FC = () => {
               <button
                 key={item.id}
                 onClick={() => handleNavigation(item.path)}
-                className={`block w-full text-left px-4 py-2 text-sm font-medium transition-colors bg-transparent border-none outline-none cursor-pointer ${
-                  isCurrentPage(item.path)
+                className={`block w-full text-left px-4 py-2 text-sm font-medium transition-colors bg-transparent border-none outline-none cursor-pointer ${isCurrentPage(item.path)
                     ? 'text-red-500'
                     : 'text-gray-300 hover:text-white'
-                }`}
+                  }`}
               >
                 {item.label}
               </button>
