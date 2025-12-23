@@ -83,35 +83,30 @@ const Contact: React.FC = () => {
       icon: MapPin,
       title: 'Office Address',
       details: [
-        'M/s D.H. Fulzele',
-        'Nagpur, Maharashtra, India',
-        'Industrial Engineering Hub'
+        'B1- Aahtavinayak paradise',
+        'beside Eden Garden restaurant',
+        'koradi road Nagpur 441111'
       ]
     },
     {
       icon: Phone,
       title: 'Phone Numbers',
       details: [
-        '+91 XXX XXX XXXX',
-        '+91 XXX XXX XXXX',
-        'Toll Free: 1800 XXX XXXX'
+        '+91 9960601763',
       ]
     },
     {
       icon: Mail,
       title: 'Email Addresses',
       details: [
-        'info@dhfulzele.com',
-        'engineering@dhfulzele.com',
-        'support@dhfulzele.com'
+        'info@dhftechs.com',
       ]
     },
     {
       icon: Clock,
       title: 'Office Hours',
       details: [
-        'Monday - Friday: 9:00 AM - 6:00 PM',
-        'Saturday: 9:00 AM - 1:00 PM',
+        'Mon - Sat: 10:00 AM - 6:00 PM',
         'Sunday: Closed'
       ]
     }
@@ -125,28 +120,28 @@ const Contact: React.FC = () => {
         <svg className="absolute left-0 top-0 w-1/2 h-full opacity-5" viewBox="0 0 400 400">
           <defs>
             <pattern id="blueprint-contact" x="0" y="0" width="50" height="50" patternUnits="userSpaceOnUse">
-              <path 
-                d="M 50 0 L 0 0 L 0 50" 
-                fill="none" 
-                stroke="#2C2C2C" 
+              <path
+                d="M 50 0 L 0 0 L 0 50"
+                fill="none"
+                stroke="#2C2C2C"
                 strokeWidth="1"
                 className="blueprint-line"
                 strokeDasharray="5,5"
               />
             </pattern>
           </defs>
-          <rect width="100%" height="100%" fill="url(#blueprint-contact)"/>
+          <rect width="100%" height="100%" fill="url(#blueprint-contact)" />
         </svg>
 
         {/* IT Digital Grid Pattern */}
         <svg className="absolute right-0 top-0 w-1/2 h-full opacity-5" viewBox="0 0 400 400">
           <defs>
             <pattern id="digital-grid-contact" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
-              <rect width="40" height="40" fill="none" stroke="#D62828" strokeWidth="1"/>
-              <circle cx="20" cy="20" r="2" fill="#D62828" className="grid-pulse"/>
+              <rect width="40" height="40" fill="none" stroke="#D62828" strokeWidth="1" />
+              <circle cx="20" cy="20" r="2" fill="#D62828" className="grid-pulse" />
             </pattern>
           </defs>
-          <rect width="100%" height="100%" fill="url(#digital-grid-contact)"/>
+          <rect width="100%" height="100%" fill="url(#digital-grid-contact)" />
         </svg>
       </div>
 
@@ -163,7 +158,7 @@ const Contact: React.FC = () => {
               Get In <span className="text-red-500">Touch</span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-              Ready to transform your industrial operations? Contact our expert team for 
+              Ready to transform your industrial operations? Contact our expert team for
               comprehensive engineering and IT solutions tailored to your needs.
             </p>
           </motion.div>
@@ -235,11 +230,10 @@ const Contact: React.FC = () => {
                       onFocus={() => setFocusedField('name')}
                       onBlur={() => setFocusedField('')}
                       required
-                      className={`w-full pl-12 pr-4 py-3 bg-gray-800 border rounded-lg text-white placeholder-gray-400 transition-all ${
-                        focusedField === 'name' 
-                          ? 'border-orange-500 ring-2 ring-orange-500/20' 
-                          : 'border-gray-700 hover:border-gray-600'
-                      }`}
+                      className={`w-full pl-12 pr-4 py-3 bg-gray-800 border rounded-lg text-white placeholder-gray-400 transition-all ${focusedField === 'name'
+                        ? 'border-orange-500 ring-2 ring-orange-500/20'
+                        : 'border-gray-700 hover:border-gray-600'
+                        }`}
                       placeholder="Enter your full name"
                     />
                   </div>
@@ -261,11 +255,10 @@ const Contact: React.FC = () => {
                       onFocus={() => setFocusedField('email')}
                       onBlur={() => setFocusedField('')}
                       required
-                      className={`w-full pl-12 pr-4 py-3 bg-gray-800 border rounded-lg text-white placeholder-gray-400 transition-all ${
-                        focusedField === 'email' 
-                          ? 'border-orange-500 ring-2 ring-orange-500/20' 
-                          : 'border-gray-700 hover:border-gray-600'
-                      }`}
+                      className={`w-full pl-12 pr-4 py-3 bg-gray-800 border rounded-lg text-white placeholder-gray-400 transition-all ${focusedField === 'email'
+                        ? 'border-orange-500 ring-2 ring-orange-500/20'
+                        : 'border-gray-700 hover:border-gray-600'
+                        }`}
                       placeholder="Enter your email address"
                     />
                   </div>
@@ -288,11 +281,10 @@ const Contact: React.FC = () => {
                       onChange={handleInputChange}
                       onFocus={() => setFocusedField('phone')}
                       onBlur={() => setFocusedField('')}
-                      className={`w-full pl-12 pr-4 py-3 bg-gray-800 border rounded-lg text-white placeholder-gray-400 transition-all ${
-                        focusedField === 'phone' 
-                          ? 'border-orange-500 ring-2 ring-orange-500/20' 
-                          : 'border-gray-700 hover:border-gray-600'
-                      }`}
+                      className={`w-full pl-12 pr-4 py-3 bg-gray-800 border rounded-lg text-white placeholder-gray-400 transition-all ${focusedField === 'phone'
+                        ? 'border-orange-500 ring-2 ring-orange-500/20'
+                        : 'border-gray-700 hover:border-gray-600'
+                        }`}
                       placeholder="Enter your phone number"
                     />
                   </div>
@@ -311,11 +303,10 @@ const Contact: React.FC = () => {
                     onChange={handleInputChange}
                     onFocus={() => setFocusedField('company')}
                     onBlur={() => setFocusedField('')}
-                    className={`w-full px-4 py-3 bg-gray-800 border rounded-lg text-white placeholder-gray-400 transition-all ${
-                      focusedField === 'company' 
-                        ? 'border-orange-500 ring-2 ring-orange-500/20' 
-                        : 'border-gray-700 hover:border-gray-600'
-                    }`}
+                    className={`w-full px-4 py-3 bg-gray-800 border rounded-lg text-white placeholder-gray-400 transition-all ${focusedField === 'company'
+                      ? 'border-orange-500 ring-2 ring-orange-500/20'
+                      : 'border-gray-700 hover:border-gray-600'
+                      }`}
                     placeholder="Enter your company name"
                   />
                 </div>
@@ -335,11 +326,10 @@ const Contact: React.FC = () => {
                   onFocus={() => setFocusedField('subject')}
                   onBlur={() => setFocusedField('')}
                   required
-                  className={`w-full px-4 py-3 bg-gray-800 border rounded-lg text-white placeholder-gray-400 transition-all ${
-                    focusedField === 'subject' 
-                      ? 'border-orange-500 ring-2 ring-orange-500/20' 
-                      : 'border-gray-700 hover:border-gray-600'
-                  }`}
+                  className={`w-full px-4 py-3 bg-gray-800 border rounded-lg text-white placeholder-gray-400 transition-all ${focusedField === 'subject'
+                    ? 'border-orange-500 ring-2 ring-orange-500/20'
+                    : 'border-gray-700 hover:border-gray-600'
+                    }`}
                   placeholder="What can we help you with?"
                 />
               </div>
@@ -360,11 +350,10 @@ const Contact: React.FC = () => {
                     onFocus={() => setFocusedField('message')}
                     onBlur={() => setFocusedField('')}
                     required
-                    className={`w-full pl-12 pr-4 py-3 bg-gray-800 border rounded-lg text-white placeholder-gray-400 resize-none transition-all ${
-                      focusedField === 'message' 
-                        ? 'border-orange-500 ring-2 ring-orange-500/20' 
-                        : 'border-gray-700 hover:border-gray-600'
-                    }`}
+                    className={`w-full pl-12 pr-4 py-3 bg-gray-800 border rounded-lg text-white placeholder-gray-400 resize-none transition-all ${focusedField === 'message'
+                      ? 'border-orange-500 ring-2 ring-orange-500/20'
+                      : 'border-gray-700 hover:border-gray-600'
+                      }`}
                     placeholder="Please describe your requirements or inquiry in detail..."
                   />
                 </div>
@@ -399,16 +388,22 @@ const Contact: React.FC = () => {
           >
             <div className="text-center mb-8">
               <h3 className="text-2xl font-bold text-white mb-4">Find Us</h3>
-              <p className="text-gray-300">Visit our office for in-person consultations and meetings.</p>
+              <p className="text-gray-300">
+                Visit our office for in-person consultations and meetings.
+              </p>
             </div>
 
-            {/* Map Placeholder */}
-            <div className="w-full h-96 bg-gray-800 rounded-xl flex items-center justify-center">
-              <div className="text-center">
-                <MapPin className="w-16 h-16 text-red-500 mx-auto mb-4" />
-                <p className="text-white text-lg font-semibold mb-2">Interactive Map</p>
-                <p className="text-gray-400">Google Maps integration will be added here</p>
-              </div>
+            {/* Embedded Google Map */}
+            <div className="w-full h-96 rounded-xl overflow-hidden">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3085.0695768708633!2d79.07461907427826!3d21.211268981486928!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd4c16322a95531%3A0x27f1c6908442da67!2sAshtavinayak%20Paradise%20Society%2C%201%2C%20Smruti%20Nagar%2C%20Bhokara%2C%20Nagpur%2C%20Maharashtra%20441111!5e1!3m2!1sen!2sin!4v1766475306372!5m2!1sen!2sin"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              ></iframe>
             </div>
           </motion.div>
         </div>

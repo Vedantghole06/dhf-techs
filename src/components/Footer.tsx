@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import Logo from '../assets/logo.png';
-import { MapPin, Phone, Mail, Clock, Linkedin, Twitter, Facebook } from 'lucide-react';
+import { MapPin, Phone, Mail, Clock } from 'lucide-react';
 
 const Footer: React.FC = () => {
   const navigate = useNavigate();
@@ -42,23 +42,12 @@ const Footer: React.FC = () => {
               className="mb-6"
             >
               <div className="flex justify-center md:justify-start">
-                <img className='h-10 m-2' src={Logo} alt="D.H. Fulzele Logo" />
+                <img className='h-16 m-2' src={Logo} alt="D.H. Fulzele Logo" />
               </div>
               <p className="text-gray-400 text-sm leading-relaxed mb-4">
                 Leading provider of engineering and IT solutions, serving industries across India
                 with 35+ years of expertise in mechanical, civil engineering, and software development.
               </p>
-              <div className="flex space-x-4 justify-center md:justify-start">
-                <a href="#" className="text-gray-400 hover:text-red-500 transition-colors">
-                  <Linkedin size={20} />
-                </a>
-                <a href="#" className="text-gray-400 hover:text-red-500 transition-colors">
-                  <Twitter size={20} />
-                </a>
-                <a href="#" className="text-gray-400 hover:text-red-500 transition-colors">
-                  <Facebook size={20} />
-                </a>
-              </div>
             </motion.div>
           </div>
 
@@ -125,27 +114,27 @@ const Footer: React.FC = () => {
                 <div className="flex items-start space-x-3 justify-center md:justify-start">
                   <MapPin className="w-4 h-4 text-red-500 mt-1 flex-shrink-0" />
                   <div className="text-gray-400 text-sm">
-                    <p>Nagpur, Maharashtra, India</p>
-                    <p>Industrial Engineering Hub</p>
+                   <p> B1- Aahtavinayak Paradise,</p> 
+                    <p>Beside Eden Garden Restaurant, </p>
+                    <p>Koradi Road Nagpur - 441111</p>
                   </div>
                 </div>
                 <div className="flex items-center space-x-3 justify-center md:justify-start">
                   <Phone className="w-4 h-4 text-red-500 flex-shrink-0" />
-                  <a href="tel:+91XXXXXXXXXX" className="text-gray-400 hover:text-white transition-colors text-sm">
-                    +91 XXX XXX XXXX
+                  <a href="tel:+91 9960601763" className="text-gray-400 hover:text-white transition-colors text-sm">
+                    +91 9960601763
                   </a>
                 </div>
                 <div className="flex items-center space-x-3 justify-center md:justify-start">
                   <Mail className="w-4 h-4 text-red-500 flex-shrink-0" />
                   <a href="mailto:info@dhfulzele.com" className="text-gray-400 hover:text-white transition-colors text-sm">
-                    info@dhfulzele.com
+                    info@dhftechs.com
                   </a>
                 </div>
                 <div className="flex items-start space-x-3 justify-center md:justify-start">
                   <Clock className="w-4 h-4 text-red-500 mt-1 flex-shrink-0" />
                   <div className="text-gray-400 text-sm">
-                    <p>Mon - Fri: 9:00 AM - 6:00 PM</p>
-                    <p>Sat: 9:00 AM - 1:00 PM</p>
+                    <p>Mon - Sat: 10:00 AM - 6:00 PM</p>
                   </div>
                 </div>
               </div>

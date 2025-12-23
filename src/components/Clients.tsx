@@ -19,27 +19,33 @@ const Clients: React.FC = () => {
     },
     {
       name: 'Jai Shree Tools',
-      logo: '/clients/jai-shree-tools.png',
+      logo: '.png',
       description: 'Industrial tools and equipment manufacturing',
       sector: 'Manufacturing'
     },
     {
       name: 'Numac',
-      logo: '/clients/numac.png',
+      logo: './numac.png',
       description: 'Industrial automation and control systems',
       sector: 'Automation'
     },
     {
       name: 'DNB Group of Engineering',
-      logo: '/clients/dnb.png',
+      logo: './DNB.png',
       description: 'Comprehensive engineering solutions and services',
       sector: 'Engineering'
     },
     {
       name: 'Jayshree Electrodevice',
-      logo: '/clients/jed.png',
+      logo: './Jayshree.png',
       description: 'Electronic devices and industrial equipment',
       sector: 'Electronics'
+    },
+    {
+      name: 'Adani Power',
+      logo: './Adani.png',
+      description: 'Adani Power Limited - Major player in the Indian power sector',
+      sector: 'Power Generation'
     }
   ];
 
