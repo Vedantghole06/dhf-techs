@@ -169,7 +169,7 @@ const Products = () => {
         "Sleek design",
         "Water resistance",
       ],
-      image: "./locomotive_signal.jpg",
+      image: "./locomotive_signal.png",
       overview: {
         summary: "The Locomotive Direction Signalling System is a state-of-the-art signaling solution designed specifically for railway point indication. This system provides clear, reliable visual indication of track point positions through an innovative dual-sided LED display system with sensor-based detection technology.",
         keyBenefits: [
@@ -199,52 +199,8 @@ const Products = () => {
             "Low power consumption LED technology",
             "Durable mounting hardware included",
           ],
-          image: "./locomotive_signal.jpg",
-        },
-        {
-          id: 22,
-          icon: Settings,
-          title: "Sensor Detection Unit",
-          description: "Precision sensor system for automatic blade position detection.",
-          features: [
-            "Magnetic or proximity sensor options",
-            "Real-time position detection",
-            "High accuracy blade sensing",
-            "Industrial-grade components",
-            "Easy calibration system",
-            "Fail-safe operation mode",
-          ],
-          image: "./locomotive_signal.jpg",
-        },
-        {
-          id: 23,
-          icon: Zap,
-          title: "Control & Power Module",
-          description: "Central control unit managing signal display and power distribution.",
-          features: [
-            "Microcontroller-based intelligent control",
-            "Dual output for both indication sides",
-            "Overload and short-circuit protection",
-            "Wide input voltage range 12V-24V DC",
-            "Status monitoring capabilities",
-            "Compact modular design",
-          ],
-          image: "./locomotive_signal.jpg",
-        },
-        {
-          id: 24,
-          icon: Monitor,
-          title: "Mounting Hardware Kit",
-          description: "Complete mounting solution for secure installation in railway environments.",
-          features: [
-            "Corrosion-resistant mounting brackets",
-            "Vibration dampening system",
-            "Adjustable viewing angle",
-            "Weather-sealed cable glands",
-            "Stainless steel fasteners included",
-          ],
-          image: "./locomotive_signal.jpg",
-        },
+          image: "./locomotive_signal.png",
+        }
       ],
     },
     {
