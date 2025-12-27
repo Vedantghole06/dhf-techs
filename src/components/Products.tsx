@@ -90,7 +90,7 @@ const Products = () => {
             "Adjustable transmitting power from 22mW to 750mW",
             "Adjustable dual resolution output via HDMI 720p / 1080p",
           ],
-          image: "/mnt/data/page2.jpg",
+          image: "./loco_cam.png",
         },
         {
           id: 13,
@@ -112,7 +112,7 @@ const Products = () => {
           title: "Hooter (Siren)",
           description: "Industrial grade loud siren for audible alerts and warnings.",
           features: ["110dB industrial grade loud siren"],
-          image: "/mnt/data/page2.jpg",
+          image: "./hooter.jpg",
         },
         {
           id: 15,
@@ -124,7 +124,7 @@ const Products = () => {
             "Maximize battery life",
             "Electrical power independence",
           ],
-          image: "/mnt/data/page3.jpg",
+          image: "./solar.jpg",
         },
         {
           id: 16,
@@ -138,7 +138,7 @@ const Products = () => {
             "No UV emission",
             "Wide operational temperature range",
           ],
-          image: "/mnt/data/page3.jpg",
+          image: "./lights.jpg",
         },
         {
           id: 17,
@@ -151,7 +151,7 @@ const Products = () => {
             "Spill free sealed lead acid",
             "Maintenance free",
           ],
-          image: "/mnt/data/page3.jpg",
+          image: "./battery.jpg",
         },
       ],
     },
@@ -246,7 +246,7 @@ const Products = () => {
             "Wireless Over-Speed Alert",
             "Programmable Over-Speed Limit",
           ],
-          image: "./wireless_speed.jpg",
+          image: "./wireless_speed_sensor.png",
         },
         {
           id: 32,
@@ -264,7 +264,7 @@ const Products = () => {
             "Ambient light resistance (Up to 100Klux)",
             "Wide range of temperature adaptation and voltage input",
           ],
-          image: "./laser_collision.jpg",
+          image: "./wireless_collision_system.png",
         },
         {
           id: 33,
@@ -279,7 +279,7 @@ const Products = () => {
             "Maximum 100mW transmitting power",
             "3.2-5.5V low voltage power supply",
           ],
-          image: "./wireless_nodes.jpg",
+          image: "./wireless_nodes.png",
         },
         {
           id: 34,
@@ -295,7 +295,7 @@ const Products = () => {
             "Data Retention until Acknowledged",
             "Multi-channel monitoring capability",
           ],
-          image: "./control_panel.jpg",
+          image: "./wireless_control_panel.png",
         },
       ],
     },
