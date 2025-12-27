@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react';
+import { useNavigate } from "react-router-dom";
 import { motion } from 'framer-motion';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -7,6 +8,7 @@ import { Award, Handshake, Users, Building, CheckCircle, Star } from 'lucide-rea
 gsap.registerPlugin(ScrollTrigger);
 
 const Clients: React.FC = () => {
+  const navigate = useNavigate();
   const logoCarouselRef = useRef<HTMLDivElement>(null);
   const certificatesRef = useRef<HTMLDivElement>(null);
 
@@ -349,6 +351,7 @@ const Clients: React.FC = () => {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
+              onClick={() => navigate("/contact")}
               className="px-8 py-4 bg-gradient-to-r from-red-600 to-orange-500 text-white rounded-lg font-semibold text-lg hover:from-red-700 hover:to-orange-600 transition-all"
             >
               Partner With Us

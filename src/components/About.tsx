@@ -224,7 +224,7 @@ const About = () => {
                   <div className="w-48 h-48 rounded-full overflow-hidden border-4 border-gradient-to-r from-red-500 to-orange-500 p-1">
                     <div className="w-full h-full rounded-full overflow-hidden">
                       <img
-                        src="https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg"
+                        src="./dhfulzele.jpg"
                         alt="Mr. D.H. Fulzele - CEO"
                         className="w-full h-full object-cover"
                       />

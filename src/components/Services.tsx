@@ -1,22 +1,26 @@
 import React, { useEffect, useRef } from 'react';
+import { useNavigate } from "react-router-dom";
 import { motion } from 'framer-motion';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { 
+import {
   Wrench, Users, Building, Shield, Cog, Truck,
   Code, Database, Cloud, Settings, Smartphone, BarChart3
 } from 'lucide-react';
 
 gsap.registerPlugin(ScrollTrigger);
 
+
+
 const Services = () => {
+  const navigate = useNavigate();
   const servicesRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (servicesRef.current) {
       const cards = servicesRef.current.querySelectorAll('.service-card');
 
-      gsap.fromTo(cards, 
+      gsap.fromTo(cards,
         {
           opacity: 0,
           y: 60,
@@ -132,7 +136,7 @@ const Services = () => {
               Our <span className="text-red-500">Services</span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-              Comprehensive engineering and IT solutions designed to optimize industrial performance, 
+              Comprehensive engineering and IT solutions designed to optimize industrial performance,
               enhance operational efficiency, and drive technological advancement.
             </p>
           </motion.div>
@@ -240,16 +244,18 @@ const Services = () => {
           >
             <h3 className="text-3xl font-bold text-white mb-6">Ready to Get Started?</h3>
             <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
-              Contact us today to discuss your engineering and IT requirements. 
+              Contact us today to discuss your engineering and IT requirements.
               Our expert team is ready to deliver customized solutions for your business.
             </p>
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
+              onClick={() => navigate("/contact")}
               className="px-8 py-4 bg-gradient-to-r from-red-600 to-orange-500 text-white rounded-lg font-semibold text-lg hover:from-red-700 hover:to-orange-600 transition-all"
             >
               Contact Our Experts
             </motion.button>
+
           </motion.div>
         </div>
       </section>
