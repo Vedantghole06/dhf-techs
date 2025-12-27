@@ -233,14 +233,14 @@ const Products = () => {
                 <ArrowLeft className="w-5 h-5" />
                 <span className="text-sm sm:text-base">Back to Products</span>
               </button>
-              <div className="flex space-x-2 sm:space-x-3 w-full sm:w-auto">
+              {/* <div className="flex space-x-2 sm:space-x-3 w-full sm:w-auto">
                 <button className="flex-1 sm:flex-none px-3 sm:px-4 py-2 bg-gray-800 text-white rounded-lg text-xs sm:text-sm font-medium hover:bg-gray-700 transition-all">
                   Download
                 </button>
                 <button className="flex-1 sm:flex-none px-3 sm:px-4 py-2 bg-gradient-to-r from-red-600 to-orange-500 text-white rounded-lg text-xs sm:text-sm font-medium hover:from-red-700 hover:to-orange-600 transition-all">
                   Request Quote
                 </button>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

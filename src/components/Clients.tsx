@@ -19,7 +19,7 @@ const Clients: React.FC = () => {
     },
     {
       name: 'Jai Shree Tools',
-      logo: '.png',
+      logo: './jayshree-tools.png',
       description: 'Industrial tools and equipment manufacturing',
       sector: 'Manufacturing'
     },

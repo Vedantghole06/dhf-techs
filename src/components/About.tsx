@@ -286,9 +286,9 @@ const About = () => {
               whileHover={{ y: -10, scale: 1.02 }}
               className="bg-gray-900/50 p-8 rounded-xl border border-gray-800 hover:border-gray-600 transition-all group"
             >
-              <div className="w-40 h-40 rounded-full overflow-hidden mx-auto mb-4 border-2 border-gray-700 group-hover:border-red-500/50 transition-all">
+              <div className="w-60 h-60 rounded-full overflow-hidden mx-auto mb-4 border-2 border-gray-700 group-hover:border-red-500/50 transition-all">
                 <img
-                  src="https://images.pexels.com/photos/3785079/pexels-photo-3785079.jpeg"
+                  src="./vaibhav.jpg"
                   alt="Vaibhav Fulzele - Engineering Manager"
                   className="w-full h-full object-cover"
                 />
@@ -309,7 +309,7 @@ const About = () => {
               whileHover={{ y: -10, scale: 1.02 }}
               className="bg-gray-900/50 p-8 rounded-xl border border-gray-800 hover:border-gray-600 transition-all group"
             >
-              <div className="w-40 h-40 rounded-full overflow-hidden mx-auto mb-4 border-2 border-gray-700 group-hover:border-red-500/50 transition-all">
+              <div className="w-60 h-60 rounded-full overflow-hidden mx-auto mb-4 border-2 border-gray-700 group-hover:border-red-500/50 transition-all">
                 <img
                   src="./piyush.jpg"
                   alt="Piyush Awari - IT Director"
