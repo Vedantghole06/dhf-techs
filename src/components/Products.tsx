@@ -16,6 +16,7 @@ const Products = () => {
   const [isPageLoaded, setIsPageLoaded] = useState(false)
   const [selectedProduct, setSelectedProduct] = useState(null)
   const [activeSection, setActiveSection] = useState("overview")
+  const [isDetailAnimating, setIsDetailAnimating] = useState(false)
   
   const overviewRef = useRef(null)
   const componentsRef = useRef(null)
@@ -154,11 +155,200 @@ const Products = () => {
         },
       ],
     },
+    {
+      id: 2,
+      category: "industrial",
+      icon: Network,
+      title: "Locomotive Direction Signalling System",
+      description: "Advanced direction signaling system for locomotives with dual-side LED indication and sensor-based detection for accurate blade direction.",
+      features: [
+        "Accurate points blade direction indication",
+        "Sensor based detection system",
+        "Dual side indication",
+        "High visibility during day and night operation",
+        "Sleek design",
+        "Water resistance",
+      ],
+      image: "./locomotive_signal.jpg",
+      overview: {
+        summary: "The Locomotive Direction Signalling System is a state-of-the-art signaling solution designed specifically for railway point indication. This system provides clear, reliable visual indication of track point positions through an innovative dual-sided LED display system with sensor-based detection technology.",
+        keyBenefits: [
+          "Enhanced safety with accurate real-time direction indication",
+          "Improved visibility in all lighting conditions",
+          "Reliable sensor-based detection eliminates manual errors",
+          "Weather-resistant design for outdoor railway environments"
+        ],
+        applications: [
+          "Railway point and switch indication",
+          "Yard signaling systems",
+          "Junction control visualization",
+          "Track direction monitoring"
+        ]
+      },
+      subProducts: [
+        {
+          id: 21,
+          icon: Network,
+          title: "Direction Indicator Panel",
+          description: "Primary LED-based direction indicator with arrow pattern for clear visual guidance.",
+          features: [
+            "High-brightness LED array in arrow formation",
+            "Green LED indication for active direction",
+            "Weather-resistant enclosure",
+            "Wide viewing angle visibility",
+            "Low power consumption LED technology",
+            "Durable mounting hardware included",
+          ],
+          image: "./locomotive_signal.jpg",
+        },
+        {
+          id: 22,
+          icon: Settings,
+          title: "Sensor Detection Unit",
+          description: "Precision sensor system for automatic blade position detection.",
+          features: [
+            "Magnetic or proximity sensor options",
+            "Real-time position detection",
+            "High accuracy blade sensing",
+            "Industrial-grade components",
+            "Easy calibration system",
+            "Fail-safe operation mode",
+          ],
+          image: "./locomotive_signal.jpg",
+        },
+        {
+          id: 23,
+          icon: Zap,
+          title: "Control & Power Module",
+          description: "Central control unit managing signal display and power distribution.",
+          features: [
+            "Microcontroller-based intelligent control",
+            "Dual output for both indication sides",
+            "Overload and short-circuit protection",
+            "Wide input voltage range 12V-24V DC",
+            "Status monitoring capabilities",
+            "Compact modular design",
+          ],
+          image: "./locomotive_signal.jpg",
+        },
+        {
+          id: 24,
+          icon: Monitor,
+          title: "Mounting Hardware Kit",
+          description: "Complete mounting solution for secure installation in railway environments.",
+          features: [
+            "Corrosion-resistant mounting brackets",
+            "Vibration dampening system",
+            "Adjustable viewing angle",
+            "Weather-sealed cable glands",
+            "Stainless steel fasteners included",
+          ],
+          image: "./locomotive_signal.jpg",
+        },
+      ],
+    },
+    {
+      id: 3,
+      category: "industrial",
+      icon: Zap,
+      title: "Wireless Speed & Safety System",
+      description: "Comprehensive wireless monitoring system featuring speed sensing, laser-based collision avoidance, wireless nodes, and control panel for industrial safety applications.",
+      features: [
+        "Wireless speed monitoring with LCD display",
+        "Laser-based collision avoidance up to 10m",
+        "Long-range wireless data transmission",
+        "Centralized control panel with alert system",
+      ],
+      image: "./wireless_speed.jpg",
+      overview: {
+        summary: "The Wireless Speed & Safety System is an integrated industrial safety solution that combines multiple wireless sensing technologies to provide comprehensive monitoring and collision avoidance. This modular system includes speed sensors, laser-based proximity detection, wireless communication nodes, and a centralized control panel, all working together to enhance workplace safety and prevent accidents in industrial environments.",
+        keyBenefits: [
+          "Real-time speed monitoring with programmable alerts",
+          "Advanced collision avoidance with laser technology",
+          "Wireless architecture eliminates complex cabling",
+          "Scalable system architecture for various facility sizes"
+        ],
+        applications: [
+          "Industrial vehicle speed monitoring",
+          "Warehouse collision prevention systems",
+          "Material handling equipment safety",
+          "Automated guided vehicle (AGV) safety systems"
+        ]
+      },
+      subProducts: [
+        {
+          id: 31,
+          icon: Zap,
+          title: "Wireless Speed Sensor",
+          description: "Proximity-based speed sensor with LCD display and wireless over-speed alert capabilities.",
+          features: [
+            "Principle of Operation: Proximity Sensor",
+            "Speed Range: 300cm/s",
+            "Operating Voltage: 12 – 24V",
+            "Operating Current: <300mA",
+            "Display: Character LCD",
+            "Wireless Over-Speed Alert",
+            "Programmable Over-Speed Limit",
+          ],
+          image: "./wireless_speed.jpg",
+        },
+        {
+          id: 32,
+          icon: Database,
+          title: "Wireless Laser Collision Avoidance System",
+          description: "Advanced laser-based detection system for obstacle detection and collision prevention.",
+          features: [
+            "Detection range up to 10m",
+            "High frame rate (up to 1000Hz Adjustable)",
+            "Low power consumption",
+            "Higher accuracy and frequency",
+            "Richer Interface – UART",
+            "Light Weight: 50gm",
+            "FOV: 3°(3 degrees)",
+            "Ambient light resistance (Up to 100Klux)",
+            "Wide range of temperature adaptation and voltage input",
+          ],
+          image: "./laser_collision.jpg",
+        },
+        {
+          id: 33,
+          icon: Network,
+          title: "Wireless Nodes",
+          description: "Long-range wireless communication modules for reliable data transmission across industrial facilities.",
+          features: [
+            "Long-distance wireless transmission up to 200m in open space",
+            "Baud rate of 9,600bps in the air",
+            "Perfect replacement for Bluetooth in short-distance data transmission",
+            "Working frequency 433.4-473.0MHz",
+            "Maximum 100mW transmitting power",
+            "3.2-5.5V low voltage power supply",
+          ],
+          image: "./wireless_nodes.jpg",
+        },
+        {
+          id: 34,
+          icon: Settings,
+          title: "Wireless Control Panel",
+          description: "Central control unit for receiving wireless data and generating immediate alerts.",
+          features: [
+            "Wireless Over-Speed Data Reception",
+            "Low Latency <2ms",
+            "Operating Voltage: 12-24V",
+            "Operating Current: <800mA",
+            "Immediate Alert Signal Generation",
+            "Data Retention until Acknowledged",
+            "Multi-channel monitoring capability",
+          ],
+          image: "./control_panel.jpg",
+        },
+      ],
+    },
   ]
 
   const filteredProducts = activeCategory === "all" ? products : products.filter((product) => product.category === activeCategory)
 
   const handleCategoryChange = (categoryId) => {
+    if (categoryId === activeCategory) return
     setIsLoading(true)
     setActiveCategory(categoryId)
     setTimeout(() => {
@@ -167,11 +357,13 @@ const Products = () => {
   }
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsPageLoaded(true)
-    }, 100)
-    return () => clearTimeout(timer)
-  }, [])
+    if (!isPageLoaded) {
+      const timer = setTimeout(() => {
+        setIsPageLoaded(true)
+      }, 100)
+      return () => clearTimeout(timer)
+    }
+  }, [isPageLoaded])
 
   // Scroll spy effect
   useEffect(() => {
@@ -182,8 +374,7 @@ const Products = () => {
 
       const sections = [
         { id: "overview", ref: overviewRef },
-        { id: "components", ref: componentsRef },
-        { id: "specifications", ref: specificationsRef }
+        { id: "components", ref: componentsRef }
       ]
 
       for (let i = sections.length - 1; i >= 0; i--) {
@@ -191,24 +382,25 @@ const Products = () => {
         if (section.ref.current) {
           const offsetTop = section.ref.current.offsetTop
           if (scrollPosition >= offsetTop) {
-            setActiveSection(section.id)
+            if (activeSection !== section.id) {
+              setActiveSection(section.id)
+            }
             break
           }
         }
       }
     }
 
-    window.addEventListener("scroll", handleScroll)
+    window.addEventListener("scroll", handleScroll, { passive: true })
     handleScroll()
 
     return () => window.removeEventListener("scroll", handleScroll)
-  }, [selectedProduct])
+  }, [selectedProduct, activeSection])
 
   const scrollToSection = (sectionId) => {
     const refs = {
       overview: overviewRef,
-      components: componentsRef,
-      specifications: specificationsRef
+      components: componentsRef
     }
     
     const ref = refs[sectionId]
@@ -218,41 +410,57 @@ const Products = () => {
     }
   }
 
+  const handleProductClick = (product) => {
+    setIsDetailAnimating(false)
+    setSelectedProduct(product)
+    
+    // Smooth scroll to top
+    window.scrollTo({ top: 0, behavior: "smooth" })
+    
+    // Trigger animation after a brief delay
+    setTimeout(() => {
+      setIsDetailAnimating(true)
+    }, 100)
+  }
+
+  const handleBackToProducts = () => {
+    setIsDetailAnimating(false)
+    setTimeout(() => {
+      setSelectedProduct(null)
+      window.scrollTo({ top: 0, behavior: "smooth" })
+    }, 300)
+  }
+
   // Product Detail View
   if (selectedProduct) {
     return (
-      <div className="min-h-screen bg-black">
+      <div className="min-h-screen bg-black" style={{ scrollBehavior: "smooth" }}>
         {/* Header */}
-        <div className="sticky top-0 z-50 bg-gray-900/95 backdrop-blur-sm border-b border-gray-800">
+        <div className={`sticky top-0 z-50 bg-gray-900/95 backdrop-blur-sm border-b border-gray-800 transition-all duration-700 ${
+          isDetailAnimating ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-4"
+        }`}>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
             <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
               <button
-                onClick={() => setSelectedProduct(null)}
+                onClick={handleBackToProducts}
                 className="flex items-center space-x-2 text-gray-400 hover:text-white transition-colors"
               >
                 <ArrowLeft className="w-5 h-5" />
                 <span className="text-sm sm:text-base">Back to Products</span>
               </button>
-              {/* <div className="flex space-x-2 sm:space-x-3 w-full sm:w-auto">
-                <button className="flex-1 sm:flex-none px-3 sm:px-4 py-2 bg-gray-800 text-white rounded-lg text-xs sm:text-sm font-medium hover:bg-gray-700 transition-all">
-                  Download
-                </button>
-                <button className="flex-1 sm:flex-none px-3 sm:px-4 py-2 bg-gradient-to-r from-red-600 to-orange-500 text-white rounded-lg text-xs sm:text-sm font-medium hover:from-red-700 hover:to-orange-600 transition-all">
-                  Request Quote
-                </button>
-              </div> */}
             </div>
           </div>
         </div>
 
         {/* Mobile Navigation - Horizontal Scroll */}
-        <div className="lg:hidden sticky top-16 z-40 bg-gray-900/95 backdrop-blur-sm border-b border-gray-800">
+        <div className={`lg:hidden sticky top-16 z-40 bg-gray-900/95 backdrop-blur-sm border-b border-gray-800 transition-all duration-700 delay-100 ${
+          isDetailAnimating ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-4"
+        }`}>
           <div className="overflow-x-auto">
             <nav className="flex space-x-2 px-4 py-3 min-w-max">
               {[
                 { id: "overview", label: "Overview" },
-                { id: "components", label: "Components" },
-                { id: "specifications", label: "Specifications" }
+                { id: "components", label: "Components & Specifications" }
               ].map((item) => (
                 <button
                   key={item.id}
@@ -274,13 +482,14 @@ const Products = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 lg:py-8">
           <div className="flex gap-8">
             {/* Left Sidebar - Navigation (Desktop Only) */}
-            <div className="hidden lg:block w-64 flex-shrink-0">
+            <div className={`hidden lg:block w-64 flex-shrink-0 transition-all duration-700 delay-200 ${
+              isDetailAnimating ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-8"
+            }`}>
               <div className="sticky top-24">
                 <nav className="space-y-1">
                   {[
                     { id: "overview", label: "Overview" },
-                    { id: "components", label: "Components" },
-                    { id: "specifications", label: "Specifications" }
+                    { id: "components", label: "Components & Specifications" }
                   ].map((item) => (
                     <button
                       key={item.id}
@@ -299,7 +508,9 @@ const Products = () => {
             </div>
 
             {/* Right Content */}
-            <div className="flex-1 space-y-12 lg:space-y-16">
+            <div className={`flex-1 space-y-12 lg:space-y-16 transition-all duration-700 delay-300 ${
+              isDetailAnimating ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+            }`}>
               {/* Overview Section */}
               <section ref={overviewRef} className="scroll-mt-32 lg:scroll-mt-24">
                 <div className="flex flex-col sm:flex-row items-start sm:items-center space-y-4 sm:space-y-0 sm:space-x-4 mb-6">
@@ -346,76 +557,52 @@ const Products = () => {
                 </div>
               </section>
 
-              {/* Components Section */}
+              {/* Components & Specifications Section */}
               <section ref={componentsRef} className="scroll-mt-32 lg:scroll-mt-24">
-                <h2 className="text-2xl sm:text-3xl font-bold text-white mb-6 sm:mb-8">System Components</h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
-                  {selectedProduct.subProducts?.map((subProduct) => (
-                    <div
-                      key={subProduct.id}
-                      className="bg-gray-900 rounded-xl overflow-hidden border border-gray-800 hover:border-gray-700 transition-all duration-300"
-                    >
-                      <div className="h-40 sm:h-48 bg-gray-800 overflow-hidden relative">
-                        <img
-                          src={subProduct.image || "/placeholder.svg"}
-                          alt={subProduct.title}
-                          className="w-full h-full object-cover"
-                          onError={(e) => {
-                            e.target.src = "/modern-tech-product.png"
-                          }}
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                      </div>
-
-                      <div className="p-4 sm:p-6">
-                        <div className="flex items-center space-x-2 sm:space-x-3 mb-3">
-                          <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg bg-gray-800 flex items-center justify-center flex-shrink-0">
-                            <subProduct.icon className="w-4 h-4 sm:w-5 sm:h-5 text-gray-300" />
-                          </div>
-                          <h3 className="text-base sm:text-xl font-semibold text-white">{subProduct.title}</h3>
+                <div ref={specificationsRef} className="scroll-mt-32 lg:scroll-mt-24">
+                  <h2 className="text-2xl sm:text-3xl font-bold text-white mb-6 sm:mb-8">System Components & Specifications</h2>
+                  <div className="space-y-6 sm:space-y-8">
+                    {selectedProduct.subProducts?.map((subProduct, index) => (
+                      <div
+                        key={subProduct.id}
+                        className={`bg-gray-900 rounded-xl overflow-hidden border border-gray-800 hover:border-gray-700 transition-all duration-300 ${
+                          index % 2 === 0 ? "lg:flex" : "lg:flex lg:flex-row-reverse"
+                        }`}
+                      >
+                        <div className="lg:w-1/2 h-64 sm:h-80 lg:h-auto bg-gray-800 overflow-hidden relative">
+                          <img
+                            src={subProduct.image || "/placeholder.svg"}
+                            alt={subProduct.title}
+                            className="w-full h-full object-cover"
+                          />
+                          <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                         </div>
 
-                        <p className="text-sm sm:text-base text-gray-400 mb-4">{subProduct.description}</p>
-
-                        <div className="space-y-2">
-                          <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider">Key Features:</p>
-                          <ul className="space-y-1.5 sm:space-y-2">
-                            {subProduct.features.slice(0, 4).map((feature, featureIndex) => (
-                              <li key={featureIndex} className="text-xs sm:text-sm text-gray-400 flex items-start space-x-2">
-                                <div className="w-1 h-1 rounded-full bg-red-500 mt-1.5 sm:mt-2 flex-shrink-0"></div>
-                                <span>{feature}</span>
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </section>
-
-              {/* Specifications Section */}
-              <section ref={specificationsRef} className="scroll-mt-32 lg:scroll-mt-24">
-                <h2 className="text-2xl sm:text-3xl font-bold text-white mb-6 sm:mb-8">Technical Specifications</h2>
-                <div className="bg-gray-900 rounded-xl border border-gray-800 overflow-hidden">
-                  {selectedProduct.subProducts?.map((subProduct, index) => (
-                    <div key={subProduct.id} className={index !== 0 ? "border-t border-gray-800" : ""}>
-                      <div className="p-4 sm:p-6">
-                        <div className="flex items-center space-x-2 sm:space-x-3 mb-4">
-                          <subProduct.icon className="w-5 h-5 sm:w-6 sm:h-6 text-red-400 flex-shrink-0" />
-                          <h3 className="text-base sm:text-xl font-semibold text-white">{subProduct.title}</h3>
-                        </div>
-                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
-                          {subProduct.features.map((feature, featureIndex) => (
-                            <div key={featureIndex} className="flex items-start space-x-2 sm:space-x-3">
-                              <div className="w-1.5 h-1.5 rounded-full bg-red-500 mt-1.5 sm:mt-2 flex-shrink-0"></div>
-                              <span className="text-xs sm:text-sm text-gray-300">{feature}</span>
+                        <div className="lg:w-1/2 p-6 sm:p-8 flex flex-col justify-center">
+                          <div className="flex items-center space-x-3 mb-4">
+                            <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-gray-800 flex items-center justify-center flex-shrink-0">
+                              <subProduct.icon className="w-5 h-5 sm:w-6 sm:h-6 text-red-400" />
                             </div>
-                          ))}
+                            <h3 className="text-xl sm:text-2xl font-semibold text-white">{subProduct.title}</h3>
+                          </div>
+
+                          <p className="text-sm sm:text-base text-gray-400 mb-6">{subProduct.description}</p>
+
+                          <div className="space-y-3">
+                            <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider">Specifications:</p>
+                            <ul className="space-y-2 sm:space-y-3">
+                              {subProduct.features.map((feature, featureIndex) => (
+                                <li key={featureIndex} className="text-sm sm:text-base text-gray-300 flex items-start space-x-3">
+                                  <div className="w-1.5 h-1.5 rounded-full bg-red-500 mt-2 flex-shrink-0"></div>
+                                  <span>{feature}</span>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                  ))}
+                    ))}
+                  </div>
                 </div>
               </section>
             </div>
@@ -483,7 +670,7 @@ const Products = () => {
               {filteredProducts.map((product, index) => (
                 <div
                   key={product.id}
-                  onClick={() => setSelectedProduct(product)}
+                  onClick={() => handleProductClick(product)}
                   className="bg-gray-900/50 rounded-xl overflow-hidden border border-gray-800 hover:border-gray-600 transition-all duration-300 group cursor-pointer transform hover:-translate-y-2"
                   style={{
                     transitionDelay: isPageLoaded ? `${700 + index * 100}ms` : "0ms",
@@ -494,9 +681,6 @@ const Products = () => {
                       src={product.image || "/placeholder.svg"}
                       alt={product.title}
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                      onError={(e) => {
-                        e.target.src = "/modern-tech-product.png"
-                      }}
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
                   </div>
