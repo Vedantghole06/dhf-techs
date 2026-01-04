@@ -102,7 +102,10 @@ const About = () => {
             className="text-center mb-16"
           >
             <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6">
-              About <span className="text-red-500">M/s D.H. Fulzele</span>
+              About
+            </h1>
+            <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6">
+              <span className="text-red-500">M/s D.H. Fulzele</span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
               Since 1988, we've been pioneering the perfect balance between traditional engineering
@@ -294,7 +297,7 @@ const About = () => {
                 />
               </div>
               <h3 className="text-lg font-semibold text-white text-center mb-1">Vaibhav Fulzele</h3>
-              <p className="text-red-400 text-sm text-center mb-3 font-medium">Co-Founder</p>
+              <p className="text-red-400 text-sm text-center mb-3 font-medium">Co-Founder & Managing Director</p>
               <p className="text-gray-400 text-sm text-center leading-relaxed">
                 15+ years in mechanical engineering and industrial automation systems.
               </p>
