@@ -192,10 +192,10 @@ const Hero = () => {
               className="flex flex-col justify-center space-y-6"
             >
               <div className="flex items-center space-x-3 justify-center lg:justify-start">
-                <Cog
+                {/* <Cog
                   className="floating-icon w-8 h-8 text-gray-300"
                   aria-hidden="true"
-                />
+                /> */}
                 <h2 className="text-xl font-semibold text-gray-300">
                   Engineering Excellence
                 </h2>
@@ -235,10 +235,10 @@ const Hero = () => {
               className="flex flex-col justify-center space-y-6"
             >
               <div className="flex items-center space-x-3 justify-center lg:justify-start">
-                <Code
+                {/* <Code
                   className="floating-icon w-8 h-8 text-red-500"
                   aria-hidden="true"
-                />
+                /> */}
                 <h2 className="text-xl font-semibold text-red-500">
                   IT Innovation
                 </h2>
@@ -306,7 +306,7 @@ const Hero = () => {
                   aria-hidden="true"
                 />
                 <AnimatedCounter
-                  end={85}
+                  end={92}
                   suffix="+"
                   className="text-3xl font-bold text-white"
                 />
@@ -328,7 +328,7 @@ const Hero = () => {
                   Years of Experience
                 </p>
               </div>
-              <div className="flex flex-col items-center space-y-4 p-6 bg-gray-900/50 rounded-xl border border-gray-800">
+              {/* <div className="flex flex-col items-center space-y-4 p-6 bg-gray-900/50 rounded-xl border border-gray-800">
                 <TrendingUp
                   className="w-8 h-8 text-red-500"
                   aria-hidden="true"
@@ -339,7 +339,7 @@ const Hero = () => {
                 <p className="text-gray-400">
                   Annual Turnover
                 </p>
-              </div>
+              </div> */}
             </div>
           </motion.div>
         </div>
