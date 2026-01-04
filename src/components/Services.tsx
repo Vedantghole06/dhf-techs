@@ -10,8 +10,6 @@ import {
 
 gsap.registerPlugin(ScrollTrigger);
 
-
-
 const Services = () => {
   const navigate = useNavigate();
   const servicesRef = useRef<HTMLDivElement>(null);

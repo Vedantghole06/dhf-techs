@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
-import Logo from '../assets/logo.png';
+import Logo from '../../public/logo_new.png';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -38,7 +38,7 @@ const Header = () => {
             className="flex items-center space-x-2 cursor-pointer"
             onClick={() => handleNavigation('/')}
           >
-            <img className='h-10' src={Logo} alt="D.H. Fulzele Logo" />
+            <img className='h-12' src={Logo} alt="D.H. Fulzele Logo" />
           </motion.div>
 
           {/* Desktop Navigation */}
