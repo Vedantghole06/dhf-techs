@@ -101,13 +101,13 @@ const About = () => {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6">
+            <h1 className="text-4xl lg:text-6xl font-bold text-white mb-2">
               About
             </h1>
             <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6">
               <span className="text-red-500">M/s D.H. Fulzele</span>
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed capitalize">
               Since 1988, we've been pioneering the perfect balance between traditional engineering
               excellence and cutting-edge IT innovation, serving industries across India with
               unwavering commitment to quality and reliability.
@@ -131,7 +131,7 @@ const About = () => {
                 <Target className="w-8 h-8 text-red-500" />
                 <h2 className="text-3xl font-bold text-white">Our Mission</h2>
               </div>
-              <p className="text-gray-300 text-lg leading-relaxed text-center lg:text-left">
+              <p className="text-gray-300 text-lg leading-relaxed text-center lg:text-left capitalize">
                 To deliver comprehensive engineering and IT solutions that enhance industrial
                 efficiency, safety, and sustainability. We strive to be the trusted partner
                 for businesses seeking reliable technical expertise and innovative digital transformation.
@@ -149,7 +149,7 @@ const About = () => {
                 <Eye className="w-8 h-8 text-orange-500" />
                 <h2 className="text-3xl font-bold text-white">Our Vision</h2>
               </div>
-              <p className="text-gray-300 text-lg leading-relaxed text-center lg:text-left">
+              <p className="text-gray-300 text-lg leading-relaxed text-center lg:text-left capitalize">
                 To be India's leading integrated engineering and IT solutions provider,
                 recognized for our innovation, reliability, and commitment to creating
                 sustainable industrial ecosystems that drive economic growth and technological advancement.
@@ -170,7 +170,7 @@ const About = () => {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-6">Core Values</h2>
-            <p className="text-gray-300 text-lg max-w-2xl mx-auto">
+            <p className="text-gray-300 text-lg max-w-2xl mx-auto capitalize">
               The principles that guide every decision, every project, and every relationship we build.
             </p>
           </motion.div>
@@ -208,7 +208,7 @@ const About = () => {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-6">Leadership</h2>
-            <p className="text-gray-300 text-lg max-w-2xl mx-auto">
+            <p className="text-gray-300 text-lg max-w-2xl mx-auto capitalize">
               Visionary leadership driving innovation and excellence in engineering and IT solutions.
             </p>
           </motion.div>
@@ -239,7 +239,7 @@ const About = () => {
                 <div className="flex-grow text-center lg:text-left">
                   <h3 className="text-3xl font-bold text-white mb-2">Mr. D.H. Fulzele</h3>
                   <p className="text-xl text-red-400 font-semibold mb-4">Chief Executive Officer & Founder</p>
-                  <p className="text-gray-300 leading-relaxed mb-6">
+                  <p className="text-gray-300 leading-relaxed mb-6 capitalize">
                     With over three decades of visionary leadership, Mr. D.H. Fulzele has built the company
                     from the ground up, establishing it as a trusted name in engineering and IT solutions.
                     His commitment to innovation and quality has driven the company's growth from a small
@@ -274,7 +274,7 @@ const About = () => {
             className="text-center mb-20"
           >
             <h2 className="text-4xl font-bold text-white mb-6">Our Expert Team</h2>
-            <p className="text-gray-300 text-lg max-w-2xl mx-auto">
+            <p className="text-gray-300 text-lg max-w-2xl mx-auto capitalize">
               Meet the dedicated professionals who drive our success in engineering and IT solutions.
             </p>
           </motion.div>
@@ -299,7 +299,7 @@ const About = () => {
               <h3 className="text-lg font-semibold text-white text-center mb-1">Vaibhav Fulzele</h3>
               <p className="text-red-400 text-sm text-center mb-3 font-medium">Co-Founder & Managing Director</p>
               <p className="text-gray-400 text-sm text-center leading-relaxed">
-                15+ years in mechanical engineering and industrial automation systems.
+                16+ years in mechanical engineering and industrial automation systems.
               </p>
             </motion.div>
 
@@ -340,7 +340,7 @@ const About = () => {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-6">Our Journey</h2>
-            <p className="text-gray-300 text-lg max-w-2xl mx-auto">
+            <p className="text-gray-300 text-lg max-w-2xl mx-auto capitalize">
               Three decades of growth, innovation, and excellence in engineering and IT solutions.
             </p>
           </motion.div>
@@ -377,7 +377,7 @@ const About = () => {
             viewport={{ once: true }}
           >
             <h3 className="text-2xl font-bold text-white mb-4">Strategic Partnership</h3>
-            <p className="text-lg text-gray-300 max-w-3xl mx-auto">
+            <p className="text-lg text-gray-300 max-w-3xl mx-auto capitalize">
               In collaboration with <span className="text-red-400 font-semibold">M/s Vaibhav Enterprises</span>,
               we deliver advanced IT, Automation, and Software solutions, expanding our capabilities
               to serve diverse industrial needs with comprehensive technical expertise.

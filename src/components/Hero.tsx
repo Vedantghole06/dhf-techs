@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { gsap } from 'gsap';
 import { Cog, Code, ArrowRight, Users, Award, TrendingUp } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 const AnimatedCounter = ({ end, suffix = '', className = '' }) => {
   const [count, setCount] = React.useState(0);
@@ -29,10 +30,12 @@ const AnimatedCounter = ({ end, suffix = '', className = '' }) => {
 };
 
 const Hero = () => {
+  const navigate = useNavigate();
   const heroRef = useRef(null);
   const engineeringRef = useRef(null);
   const itRef = useRef(null);
   const animationRef = useRef(null);
+
 
   useEffect(() => {
     // Clean up previous animation if it exists
@@ -89,13 +92,13 @@ const Hero = () => {
   }, []);
 
   const handleEngineeringClick = () => {
-    // Add your navigation logic here
-    console.log('Navigate to Engineering Services');
+    navigate('/services', { state: { scrollTo: 'engineering-services' } });
+    // Or if you have a specific route: navigate('/services/engineering');
   };
 
   const handleITClick = () => {
     // Add your navigation logic here
-    console.log('Navigate to IT Solutions');
+    navigate('/services', { state: { scrollTo: 'it-solutions' } });
   };
 
   return (
@@ -206,7 +209,7 @@ const Hero = () => {
                   Precision.
                   <span className="block text-gray-400">Reliability.</span>
                 </h1>
-                <p className="text-base sm:text-lg text-gray-300 leading-relaxed max-w-lg mx-auto lg:mx-0">
+                <p className="text-base sm:text-lg text-gray-300 leading-relaxed max-w-lg mx-auto lg:mx-0 capitalize">
                   Industrial solutions built on 35+ years of mechanical and civil engineering expertise.
                   From manpower supply to automation systems.
                 </p>
@@ -249,7 +252,7 @@ const Hero = () => {
                   Digital.
                   <span className="block text-orange-500">Future.</span>
                 </h1>
-                <p className="text-base sm:text-lg text-gray-300 leading-relaxed max-w-lg mx-auto lg:mx-0">
+                <p className="text-base sm:text-lg text-gray-300 leading-relaxed max-w-lg mx-auto lg:mx-0 capitalize">
                   Cutting-edge software development, SaaS solutions, and Manufacturing Execution Systems
                   that drive modern industry forward.
                 </p>

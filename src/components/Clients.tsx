@@ -151,7 +151,7 @@ const Clients: React.FC = () => {
             <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6">
               Our <span className="text-red-500">Clients & Partners</span>
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed capitalize">
               Trusted by leading organizations across industries. Building lasting partnerships
               through exceptional service delivery and innovative solutions.
             </p>
@@ -170,7 +170,7 @@ const Clients: React.FC = () => {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-6">Our Achievements</h2>
-            <p className="text-gray-300 text-lg max-w-2xl mx-auto">
+            <p className="text-gray-300 text-lg max-w-2xl mx-auto capitalize">
               Milestones that reflect our commitment to excellence and continuous growth.
             </p>
           </motion.div>
@@ -208,7 +208,7 @@ const Clients: React.FC = () => {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-6">Major Clients</h2>
-            <p className="text-gray-300 text-lg max-w-2xl mx-auto">
+            <p className="text-gray-300 text-lg max-w-2xl mx-auto capitalize">
               Serving industry leaders across power generation, manufacturing, and automation sectors.
             </p>
           </motion.div>
@@ -259,7 +259,7 @@ const Clients: React.FC = () => {
               <Handshake className="w-8 h-8 text-red-500" />
               <h2 className="text-4xl font-bold text-white">Strategic Partners</h2>
             </div>
-            <p className="text-gray-300 text-lg max-w-2xl mx-auto">
+            <p className="text-gray-300 text-lg max-w-2xl mx-auto capitalize">
               Collaborative partnerships that enhance our capabilities and extend our service offerings.
             </p>
           </motion.div>
@@ -301,7 +301,7 @@ const Clients: React.FC = () => {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-6">Certifications & CSR</h2>
-            <p className="text-gray-300 text-lg max-w-2xl mx-auto">
+            <p className="text-gray-300 text-lg max-w-2xl mx-auto capitalize">
               Our commitment to quality, compliance, and social responsibility.
             </p>
           </motion.div>
@@ -344,7 +344,7 @@ const Clients: React.FC = () => {
             viewport={{ once: true }}
           >
             <h3 className="text-3xl font-bold text-white mb-6">Join Our Growing Network</h3>
-            <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
+            <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto capitalize">
               Become part of our trusted client network and experience the D.H. Fulzele difference.
               Let's build something great together.
             </p>

@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
-import Logo from '../../public/logo_new.png';
+import Logo from '/logo_new.png';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

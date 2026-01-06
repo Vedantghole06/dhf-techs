@@ -44,7 +44,7 @@ const Footer: React.FC = () => {
               <div className="flex justify-center md:justify-start">
                 <img className='h-16 m-2' src={Logo} alt="D.H. Fulzele Logo" />
               </div>
-              <p className="text-gray-400 text-sm leading-relaxed mb-4">
+              <p className="text-gray-400 text-sm leading-relaxed mb-4 capitalize">
                 Leading provider of engineering and IT solutions, serving industries across India
                 with 35+ years of expertise in mechanical, civil engineering, and software development.
               </p>
@@ -122,7 +122,7 @@ const Footer: React.FC = () => {
                 <div className="flex items-center space-x-3 justify-center md:justify-start">
                   <Phone className="w-4 h-4 text-red-500 flex-shrink-0" />
                   <a href="tel:+91 9960601763" className="text-gray-400 hover:text-white transition-colors text-sm">
-                    +91 9960601763
+                    +91 9960601763, 9922931763
                   </a>
                 </div>
                 <div className="flex items-center space-x-3 justify-center md:justify-start">

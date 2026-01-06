@@ -940,7 +940,7 @@ const Products = () => {
             <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6">
               Our <span className="text-red-500">Products</span>
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed capitalize">
               Cutting-edge industrial and software products designed to revolutionize manufacturing, automation, and
               digital transformation across industries.
             </p>
