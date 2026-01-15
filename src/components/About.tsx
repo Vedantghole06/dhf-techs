@@ -224,10 +224,10 @@ const About = () => {
               <div className="flex flex-col lg:flex-row items-center space-y-8 lg:space-y-0 lg:space-x-12">
                 {/* CEO Photo */}
                 <div className="flex-shrink-0">
-                  <div className="w-48 h-48 rounded-full overflow-hidden border-4 border-gradient-to-r from-red-500 to-orange-500 p-1">
-                    <div className="w-full h-full rounded-full overflow-hidden">
+                  <div className="w-60 h-60 rounded-full overflow-hidden border-4 border-gradient-to-r from-red-500 to-orange-500 p-1">
+                    <div className="w-full h-full rounded-full overflow-hidden ">
                       <img
-                        src="./dhfulzele.jpg"
+                        src="./dhf5.jpeg"
                         alt="Mr. D.H. Fulzele - CEO"
                         className="w-full h-full object-cover"
                       />
