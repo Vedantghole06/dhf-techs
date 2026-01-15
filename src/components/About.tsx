@@ -297,7 +297,7 @@ const About = () => {
                 />
               </div>
               <h3 className="text-lg font-semibold text-white text-center mb-1">Vaibhav Fulzele</h3>
-              <p className="text-red-400 text-sm text-center mb-3 font-medium">Co-Founder & Managing Director</p>
+              <p className="text-red-400 text-sm text-center mb-3 font-medium">COO & Co-Founder</p>
               <p className="text-gray-400 text-sm text-center leading-relaxed">
                 16+ years in mechanical engineering and industrial automation systems.
               </p>
