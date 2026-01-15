@@ -238,7 +238,7 @@ const About = () => {
                 {/* CEO Info */}
                 <div className="flex-grow text-center lg:text-left">
                   <h3 className="text-3xl font-bold text-white mb-2">Mr. D.H. Fulzele</h3>
-                  <p className="text-xl text-red-400 font-semibold mb-4">Chief Executive Officer & Founder</p>
+                  <p className="text-xl text-red-400 font-semibold mb-4">CEO & Founder</p>
                   <p className="text-gray-300 leading-relaxed mb-6 capitalize">
                     With over three decades of visionary leadership, Mr. D.H. Fulzele has built the company
                     from the ground up, establishing it as a trusted name in engineering and IT solutions.
